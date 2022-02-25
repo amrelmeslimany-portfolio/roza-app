@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roza - منتجاتنا</title>
+    <meta name="language" content="Arabic">
+    <meta name="description" content="Roza متجر لبيع الورود وفازات الورود" />
+    <meta name="keywords" content="roza, ورد">
+    <meta name="theme-color" content="#4f4d8c">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/libs/line-awesome.min.css">
+    <link rel="stylesheet" href="../css/libs/owl.carousel.css">
+    <link rel="stylesheet" href="../css/libs/nice-select.css">
+    <link rel="stylesheet" href="../css/libs/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="page-loader d-flex flex-column text-center">
+            <img src="../assets/img/logo.png" class="logo-loader mb-3" alt="roza logo">
+            <span>جاري التحميل ..</span>
+            <img src="../assets/img/bg-flower.png" draggable="false" class="bg-flower-loader user-select-none"
+                alt="background roza flower">
+        </div>
+    </div>
+
+    <div class="wrap-full-page">
+        <!-- Header (Navbar & Header Intro) -->
+        <header id="main-header">
+            <nav class="navbar navbar-expand-md navbar-light border-bottom border-md-0 py-2 mb-4">
+                <div class="container">
+                    <a class="navbar-brand ms-0 me-1" href="index.html">
+                        <img src="../assets/img/logo.png" width="120" alt="roza logo">
+                    </a>
+                    <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbarTop" aria-controls="mainNavbarTop" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="las la-bars text-dark-primary display-6"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mainNavbarTop">
+                        <ul class="navbar-nav mx-auto mb-2 mb-md-0 ps-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark-primary px-4" href="who-we-are.html">من نحن</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark-primary px-4 active" href="products.html">منتجاتنا</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark-primary px-4" href="special-bouquet.html">باقة مخصصة</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark-primary px-4" href="contact-us.html">اتصل بنا</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex justify-content-between py-2 py-md-0 align-items-center">
+                            <a href="signin.html" class="me-3 text-dark-primary">تسجيل الدخول</a>
+                            <a href="shopping-cart.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                title="Go to shopping cart">
+                                <i
+                                    class="text-dark-primary hover-effect las la-shopping-bag align-middle display-xomd position-relative">
+                                    <small
+                                        class="position-absolute top-0 end-50 badge rounded-circle bg-danger flex-center avatar-sm display-oxs border ">
+                                        2
+                                    </small>
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Page Content -->
+
+        <!-- Page Content: 1) المنتجات والفلتر -->
+        <main class="products-section py-5">
+            <div class="container">
+                <!-- Order Form -->
+                <form class="pe-md-3 mb-md-3">
+                    <select name="orderProducts"
+                        class="border-primary text-start display-md text-dark-primary w-auto w-lg-20 w-md-30"
+                        id="orderProductsSelect">
+                        <option value="latest" selected>ترتيب حسب الاحدث</option>
+                        <option value="oldest">ترتيب حسب الاقدم</option>
+                        <option value="price">ترتيب حسب السعر</option>
+                    </select>
+                </form>
+                <!-- Products -->
+                <div class="row g-4">
+                    <!-- Filters -->
+                    <div class="col">
+                        <aside class="products_section-filter sticky-md-top">
+                            <ul class="nav nav-pills py-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <li class="nav-link w-100 rounded-2 active cursor-pointer" data-bs-toggle="pill"
+                                    data-bs-target="#all-products-tab">
+                                    <div class="py-1">
+                                        <img src="../assets/img/filter-icons/flower-bouquet.png" draggable="false"
+                                            class="user-select-none align-text-top d-inline-block me-2"
+                                            alt="flower bouqet" width="25">
+                                        <span class="display-omd">الكـل</span>
+                                    </div>
+                                </li>
+                                <li class="nav-link w-100 rounded-2 cursor-pointer" data-bs-toggle="pill"
+                                    data-bs-target="#gift-products-tab">
+                                    <div class="py-1">
+                                        <img src="../assets/img/filter-icons/gift.png" draggable="false"
+                                            class="user-select-none align-text-top d-inline-block me-2"
+                                            alt="flower bouqet gift" width="25">
+                                        <span class="display-omd">هدايا</span>
+                                    </div>
+                                </li>
+                                <li class="nav-link w-100 rounded-2 cursor-pointer" data-bs-toggle="pill"
+                                    data-bs-target="#gift-products-tab">
+                                    <div class="py-1">
+                                        <img src="../assets/img/filter-icons/price-tag.png" draggable="false"
+                                            class="user-select-none align-text-top d-inline-block me-2"
+                                            alt="flower bouqet price tag" width="25">
+                                        <span class="display-omd">عروض</span>
+                                    </div>
+                                </li>
+                                <li class="nav-link w-100 rounded-2 cursor-pointer dont-add-active collapsed"
+                                    data-bs-toggle="collapse" data-bs-target="#subLinksEvents" aria-expanded="false"
+                                    aria-controls="subLinksEvents">
+                                    <div class="py-1">
+                                        <img src="../assets/img/filter-icons/party.png" draggable="false"
+                                            class="user-select-none align-text-top d-inline-block me-2"
+                                            alt="flower bouqet part tag" width="25">
+                                        <span class="display-omd">مناسبات</span>
+                                    </div>
+                                </li>
+                                <li class="w-100">
+                                    <div class="collapse" id="subLinksEvents">
+                                        <ul class="card card-body border-0 pe-0 sub-navlinks">
+                                            <li class="nav-link w-100 rounded-2 cursor-pointer" data-bs-toggle="pill"
+                                                data-bs-target="#gift-products-tab">
+                                                <span class="display-omd">يوم ميلاد</span>
+                                            </li>
+                                            <li class="nav-link w-100 rounded-2 cursor-pointer" data-bs-toggle="pill"
+                                                data-bs-target="#gift-products-tab">
+                                                <span class="display-omd">زواجات</span>
+                                            </li>
+                                            <li class="nav-link w-100 rounded-2 cursor-pointer" data-bs-toggle="pill"
+                                                data-bs-target="#gift-products-tab">
+                                                <span class="display-omd">مولود</span>
+                                            </li>
+                                            <li class="nav-link w-100 rounded-2 cursor-pointer" data-bs-toggle="pill"
+                                                data-bs-target="#gift-products-tab">
+                                                <span class="display-omd">زيارة مريض</span>
+                                            </li>
+                                            <li class="nav-link w-100 rounded-2 cursor-pointer" data-bs-toggle="pill"
+                                                data-bs-target="#gift-products-tab">
+                                                <span class="display-omd">بيت جديد</span>
+                                            </li>
+                                            <li class="nav-link w-100 rounded-2 cursor-pointer" data-bs-toggle="pill"
+                                                data-bs-target="#gift-products-tab">
+                                                <span class="display-omd">اعتذار</span>
+                                            </li>
+                                            <li class="nav-link w-100 rounded-2 cursor-pointer" data-bs-toggle="pill"
+                                                data-bs-target="#gift-products-tab">
+                                                <span class="display-omd">تخرج</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-link w-100 rounded-2 cursor-pointer" data-bs-toggle="pill"
+                                    data-bs-target="#gift-products-tab">
+                                    <div class="py-1">
+                                        <img src="../assets/img/filter-icons/money.png" draggable="false"
+                                            class="user-select-none align-text-top d-inline-block me-2"
+                                            alt="flower bouqet money cash" width="25">
+                                        <span class="display-omd">تحت 150 ريال</span>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </aside>
+                    </div>
+                    <!-- Products Card -->
+                    <div class="col-lg-9 col-md-8">
+                        <div class="tab-content products" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="all-products-tab" role="tabpanel">
+                                <div class="row g-3">
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="card border-0">
+                                            <div class="card-header pb-0 bg-white border-bottom-0 position-relative">
+                                                <img class="lazyload img-fluid product-img rounded-2"
+                                                    src="../assets/img/loader.gif" alt="blunt"
+                                                    data-original="../assets/img/products/blunt-3.jpg">
+                                                <span
+                                                    class="badge bg-dark-primary rounded-2 position-absolute px-3 py-1 display-md product-badge">جديد</span>
+
+                                                <div class="position-absolute  product-addtocart">
+                                                    <button
+                                                        class="btn hover-effect btn-primary custom-rounded display-md px-4 py-2">
+                                                        أضف للسلة
+                                                        <i
+                                                            class="las la-shopping-bag ms-2 display-xomd align-middle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <article class="card-body ps-md-4 ps-xl-5 text-center text-sm-start">
+                                                <span class="text-black-50">زواجات</span>
+                                                <a href="product-details.html" class="d-block" data-bs-trigger="hover"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="اضغط لمشاهدة التفاصيل">
+                                                    <h5 class="mt-1">باقة ورود بيضاء </h5>
+                                                    <div>
+                                                        <strong class="text-primary display-omd">$231.00</strong>
+                                                        <span
+                                                            class="text-black-50 text-decoration-line-through ms-2">$300.00</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="display-sm fw-normal mt-n1 d-block">
+                                                    اشترك للحصول على خصم %30
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="card border-0">
+                                            <div class="card-header pb-0 bg-white border-bottom-0 position-relative">
+                                                <img class="lazyload img-fluid product-img rounded-2"
+                                                    src="../assets/img/loader.gif" alt="blunt"
+                                                    data-original="../assets/img/products/blunt-1.jpg">
+                                                <span
+                                                    class="badge bg-danger rounded-2 position-absolute px-3 py-1 display-md product-badge">عرض</span>
+
+                                                <div class="position-absolute  product-addtocart">
+                                                    <button
+                                                        class="btn hover-effect btn-primary custom-rounded display-md px-4 py-2">
+                                                        أضف للسلة
+                                                        <i
+                                                            class="las la-shopping-bag ms-2 display-xomd align-middle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <article class="card-body ps-md-4 ps-xl-5 text-center text-sm-start">
+                                                <span class="text-black-50">مولود</span>
+                                                <a href="product-details.html" class="d-block" data-bs-trigger="hover"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="اضغط لمشاهدة التفاصيل">
+                                                    <h5 class="mt-1">باقة ورود بيضاء </h5>
+                                                    <div>
+                                                        <strong class="text-primary display-omd">$231.00</strong>
+                                                        <span
+                                                            class="text-black-50 text-decoration-line-through ms-2">$300.00</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="display-sm fw-normal mt-n1 d-block">
+                                                    اشترك للحصول على خصم %30
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="card border-0">
+                                            <div class="card-header pb-0 bg-white border-bottom-0 position-relative">
+                                                <img class="lazyload img-fluid product-img rounded-2"
+                                                    src="../assets/img/loader.gif" alt="blunt"
+                                                    data-original="../assets/img/products/blunt-2.jpg">
+                                                <div class="position-absolute  product-addtocart">
+                                                    <button
+                                                        class="btn hover-effect btn-primary custom-rounded display-md px-4 py-2">
+                                                        أضف للسلة
+                                                        <i
+                                                            class="las la-shopping-bag ms-2 display-xomd align-middle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <article class="card-body ps-md-4 ps-xl-5 text-center text-sm-start">
+                                                <span class="text-black-50">تخـرج</span>
+                                                <a href="product-details.html" class="d-block" data-bs-trigger="hover"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="اضغط لمشاهدة التفاصيل">
+                                                    <h5 class="mt-1">باقة ورود بيضاء </h5>
+                                                    <div>
+                                                        <strong class="text-primary display-omd">$231.00</strong>
+                                                        <span
+                                                            class="text-black-50 text-decoration-line-through ms-2">$300.00</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="display-sm fw-normal mt-n1 d-block">
+                                                    اشترك للحصول على خصم %30
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="card border-0">
+                                            <div class="card-header pb-0 bg-white border-bottom-0 position-relative">
+                                                <img class="lazyload img-fluid product-img rounded-2"
+                                                    src="../assets/img/loader.gif" alt="blunt"
+                                                    data-original="../assets/img/products/blunt-4.jpg">
+                                                <div class="position-absolute  product-addtocart">
+                                                    <button
+                                                        class="btn hover-effect btn-primary custom-rounded display-md px-4 py-2">
+                                                        أضف للسلة
+                                                        <i
+                                                            class="las la-shopping-bag ms-2 display-xomd align-middle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <article class="card-body ps-md-4 ps-xl-5 text-center text-sm-start">
+                                                <span class="text-black-50">يوم ميلاد</span>
+                                                <a href="product-details.html" class="d-block" data-bs-trigger="hover"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="اضغط لمشاهدة التفاصيل">
+                                                    <h5 class="mt-1">باقة ورود بيضاء</h5>
+                                                    <div>
+                                                        <strong class="text-primary display-omd">$231.00</strong>
+                                                        <span
+                                                            class="text-black-50 text-decoration-line-through ms-2">$300.00</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="display-sm fw-normal mt-n1 d-block">
+                                                    اشترك للحصول على خصم %30
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="card border-0">
+                                            <div class="card-header pb-0 bg-white border-bottom-0 position-relative">
+                                                <img class="lazyload img-fluid product-img rounded-2"
+                                                    src="../assets/img/loader.gif" alt="blunt"
+                                                    data-original="../assets/img/products/blunt-5.jpg">
+                                                <div class="position-absolute  product-addtocart">
+                                                    <button
+                                                        class="btn hover-effect btn-primary custom-rounded display-md px-4 py-2">
+                                                        أضف للسلة
+                                                        <i
+                                                            class="las la-shopping-bag ms-2 display-xomd align-middle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <article class="card-body ps-md-4 ps-xl-5 text-center text-sm-start">
+                                                <span class="text-black-50">زيارة مريض </span>
+                                                <a href="product-details.html" class="d-block" data-bs-trigger="hover"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="اضغط لمشاهدة التفاصيل">
+                                                    <h5 class="mt-1">باقة ورود بيضاء</h5>
+                                                    <div>
+                                                        <strong class="text-primary display-omd">$231.00</strong>
+                                                        <span
+                                                            class="text-black-50 text-decoration-line-through ms-2">$300.00</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="display-sm fw-normal mt-n1 d-block">
+                                                    اشترك للحصول على خصم %30
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="card border-0">
+                                            <div class="card-header pb-0 bg-white border-bottom-0 position-relative">
+                                                <img class="lazyload img-fluid product-img rounded-2"
+                                                    src="../assets/img/loader.gif" alt="blunt"
+                                                    data-original="../assets/img/products/blunt-6.jpg">
+                                                <span
+                                                    class="badge bg-dark-primary rounded-2 position-absolute px-3 py-1 display-md product-badge">جديد</span>
+                                                <div class="position-absolute  product-addtocart">
+                                                    <button
+                                                        class="btn hover-effect btn-primary custom-rounded display-md px-4 py-2">
+                                                        أضف للسلة
+                                                        <i
+                                                            class="las la-shopping-bag ms-2 display-xomd align-middle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <article class="card-body ps-md-4 ps-xl-5 text-center text-sm-start">
+                                                <span class="text-black-50">بيت جديد</span>
+                                                <a href="product-details.html" class="d-block" data-bs-trigger="hover"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="اضغط لمشاهدة التفاصيل">
+                                                    <h5 class="mt-1">باقة ورود بيضاء</h5>
+                                                    <div>
+                                                        <strong class="text-primary display-omd">$231.00</strong>
+                                                        <span
+                                                            class="text-black-50 text-decoration-line-through ms-2">$300.00</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="display-sm fw-normal mt-n1 d-block">
+                                                    اشترك للحصول على خصم %30
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="card border-0">
+                                            <div class="card-header pb-0 bg-white border-bottom-0 position-relative">
+                                                <img class="lazyload img-fluid product-img rounded-2"
+                                                    src="../assets/img/loader.gif" alt="blunt"
+                                                    data-original="../assets/img/products/blunt-3.jpg">
+                                                <span
+                                                    class="badge bg-dark-primary rounded-2 position-absolute px-3 py-1 display-md product-badge">جديد</span>
+
+                                                <div class="position-absolute  product-addtocart">
+                                                    <button
+                                                        class="btn hover-effect btn-primary custom-rounded display-md px-4 py-2">
+                                                        أضف للسلة
+                                                        <i
+                                                            class="las la-shopping-bag ms-2 display-xomd align-middle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <article class="card-body ps-md-4 ps-xl-5 text-center text-sm-start">
+                                                <span class="text-black-50">زواجات</span>
+                                                <a href="product-details.html" class="d-block" data-bs-trigger="hover"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="اضغط لمشاهدة التفاصيل">
+                                                    <h5 class="mt-1">باقة ورود بيضاء </h5>
+                                                    <div>
+                                                        <strong class="text-primary display-omd">$231.00</strong>
+                                                        <span
+                                                            class="text-black-50 text-decoration-line-through ms-2">$300.00</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="display-sm fw-normal mt-n1 d-block">
+                                                    اشترك للحصول على خصم %30
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="card border-0">
+                                            <div class="card-header pb-0 bg-white border-bottom-0 position-relative">
+                                                <img class="lazyload img-fluid product-img rounded-2"
+                                                    src="../assets/img/loader.gif" alt="blunt"
+                                                    data-original="../assets/img/products/blunt-1.jpg">
+                                                <span
+                                                    class="badge bg-danger rounded-2 position-absolute px-3 py-1 display-md product-badge">عرض</span>
+
+                                                <div class="position-absolute  product-addtocart">
+                                                    <button
+                                                        class="btn hover-effect btn-primary custom-rounded display-md px-4 py-2">
+                                                        أضف للسلة
+                                                        <i
+                                                            class="las la-shopping-bag ms-2 display-xomd align-middle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <article class="card-body ps-md-4 ps-xl-5 text-center text-sm-start">
+                                                <span class="text-black-50">مولود</span>
+                                                <a href="product-details.html" class="d-block" data-bs-trigger="hover"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="اضغط لمشاهدة التفاصيل">
+                                                    <h5 class="mt-1">باقة ورود بيضاء </h5>
+                                                    <div>
+                                                        <strong class="text-primary display-omd">$231.00</strong>
+                                                        <span
+                                                            class="text-black-50 text-decoration-line-through ms-2">$300.00</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="display-sm fw-normal mt-n1 d-block">
+                                                    اشترك للحصول على خصم %30
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="card border-0">
+                                            <div class="card-header pb-0 bg-white border-bottom-0 position-relative">
+                                                <img class="lazyload img-fluid product-img rounded-2"
+                                                    src="../assets/img/loader.gif" alt="blunt"
+                                                    data-original="../assets/img/products/blunt-2.jpg">
+                                                <div class="position-absolute  product-addtocart">
+                                                    <button
+                                                        class="btn hover-effect btn-primary custom-rounded display-md px-4 py-2">
+                                                        أضف للسلة
+                                                        <i
+                                                            class="las la-shopping-bag ms-2 display-xomd align-middle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <article class="card-body ps-md-4 ps-xl-5 text-center text-sm-start">
+                                                <span class="text-black-50">تخـرج</span>
+                                                <a href="product-details.html" class="d-block" data-bs-trigger="hover"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="اضغط لمشاهدة التفاصيل">
+                                                    <h5 class="mt-1">باقة ورود بيضاء </h5>
+                                                    <div>
+                                                        <strong class="text-primary display-omd">$231.00</strong>
+                                                        <span
+                                                            class="text-black-50 text-decoration-line-through ms-2">$300.00</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="display-sm fw-normal mt-n1 d-block">
+                                                    اشترك للحصول على خصم %30
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="card border-0">
+                                            <div class="card-header pb-0 bg-white border-bottom-0 position-relative">
+                                                <img class="lazyload img-fluid product-img rounded-2"
+                                                    src="../assets/img/loader.gif" alt="blunt"
+                                                    data-original="../assets/img/products/blunt-4.jpg">
+                                                <div class="position-absolute  product-addtocart">
+                                                    <button
+                                                        class="btn hover-effect btn-primary custom-rounded display-md px-4 py-2">
+                                                        أضف للسلة
+                                                        <i
+                                                            class="las la-shopping-bag ms-2 display-xomd align-middle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <article class="card-body ps-md-4 ps-xl-5 text-center text-sm-start">
+                                                <span class="text-black-50">يوم ميلاد</span>
+                                                <a href="product-details.html" class="d-block" data-bs-trigger="hover"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="اضغط لمشاهدة التفاصيل">
+                                                    <h5 class="mt-1">باقة ورود بيضاء</h5>
+                                                    <div>
+                                                        <strong class="text-primary display-omd">$231.00</strong>
+                                                        <span
+                                                            class="text-black-50 text-decoration-line-through ms-2">$300.00</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="display-sm fw-normal mt-n1 d-block">
+                                                    اشترك للحصول على خصم %30
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="card border-0">
+                                            <div class="card-header pb-0 bg-white border-bottom-0 position-relative">
+                                                <img class="lazyload img-fluid product-img rounded-2"
+                                                    src="../assets/img/loader.gif" alt="blunt"
+                                                    data-original="../assets/img/products/blunt-5.jpg">
+                                                <div class="position-absolute  product-addtocart">
+                                                    <button
+                                                        class="btn hover-effect btn-primary custom-rounded display-md px-4 py-2">
+                                                        أضف للسلة
+                                                        <i
+                                                            class="las la-shopping-bag ms-2 display-xomd align-middle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <article class="card-body ps-md-4 ps-xl-5 text-center text-sm-start">
+                                                <span class="text-black-50">زيارة مريض </span>
+                                                <a href="product-details.html" class="d-block" data-bs-trigger="hover"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="اضغط لمشاهدة التفاصيل">
+                                                    <h5 class="mt-1">باقة ورود بيضاء</h5>
+                                                    <div>
+                                                        <strong class="text-primary display-omd">$231.00</strong>
+                                                        <span
+                                                            class="text-black-50 text-decoration-line-through ms-2">$300.00</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="display-sm fw-normal mt-n1 d-block">
+                                                    اشترك للحصول على خصم %30
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="card border-0">
+                                            <div class="card-header pb-0 bg-white border-bottom-0 position-relative">
+                                                <img class="lazyload img-fluid product-img rounded-2"
+                                                    src="../assets/img/loader.gif" alt="blunt"
+                                                    data-original="../assets/img/products/blunt-6.jpg">
+                                                <span
+                                                    class="badge bg-dark-primary rounded-2 position-absolute px-3 py-1 display-md product-badge">جديد</span>
+                                                <div class="position-absolute  product-addtocart">
+                                                    <button
+                                                        class="btn hover-effect btn-primary custom-rounded display-md px-4 py-2">
+                                                        أضف للسلة
+                                                        <i
+                                                            class="las la-shopping-bag ms-2 display-xomd align-middle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <article class="card-body ps-md-4 ps-xl-5 text-center text-sm-start">
+                                                <span class="text-black-50">بيت جديد</span>
+                                                <a href="product-details.html" class="d-block" data-bs-trigger="hover"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="اضغط لمشاهدة التفاصيل">
+                                                    <h5 class="mt-1">باقة ورود بيضاء</h5>
+                                                    <div>
+                                                        <strong class="text-primary display-omd">$231.00</strong>
+                                                        <span
+                                                            class="text-black-50 text-decoration-line-through ms-2">$300.00</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="display-sm fw-normal mt-n1 d-block">
+                                                    اشترك للحصول على خصم %30
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="gift-products-tab" role="tabpanel">
+                                قريبا...
+                            </div>
+                        </div>
+                        <!-- Pagination -->
+                        <nav class="mt-4 mb-0">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"><a class="page-link py-2 px-3 fw-600 border-0 active"
+                                        href="#">1</a>
+                                </li>
+                                <li class="page-item"><a class="page-link py-2 px-3 fw-600 border-0" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link py-2 px-3 fw-600 border-0" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link py-2 px-3 fw-600 border-0" href="#">...</a>
+                                </li>
+                                <li class="page-item"><a class="page-link py-2 px-3 fw-600 border-0" href="#">7</a></li>
+                                <li class="page-item">
+                                    <a class="page-link py-2 px-3 fw-600 border-0 pe-2" href="#">
+                                        التالى
+                                        <i class="las la-chevron-left align-middle ms-2"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Page Content: 2) قالو عن روزا -->
+        <section class="said-roza bg-primary position-relative">
+            <svg xmlns="http://www.w3.org/2000/svg" class="position-absolute d-none d-sm-block quotes-svg"
+                fill="#7270a3" width="150" height="150" viewBox="0 0 512 512">
+                <path
+                    d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z" />
+            </svg>
+
+            <div class="container">
+                <h2 class="text-white fw-bolder display-5 mb-4">قالوا عن Roza</h2>
+                <div class="owl-carousel">
+                    <section class="said-wrap">
+                        <blockquote class="said_wrap-content bg-white p-4 text-center rounded-3">
+                            <h6>Dependable, Responsive, Professional Partner</h6>
+                            <p class="mb-0 display-md">
+                                Fermin Apps has collaborated with Landify team for several projects
+                                such as Photo Sharing Apps and Custom Social Networking Apps. The
+                                experience has been pleasant, professional and exceeding our
+                                expectations. The team is always thinking beyond the current tasks &
+                                helps us formulate a vision and possibilities for future.
+                            </p>
+                        </blockquote>
+                        <div class="mx-auto mt-4 w-fit">
+                            <div class="d-flex text-white align-items-center">
+                                <div class="flex-shrink-0 me-3">
+                                    <img src="../assets/img/person.jpg" class="avatar-oxl rounded-circle"
+                                        alt="person said roza">
+                                </div>
+                                <figure class="flex-grow-1 mb-0">
+                                    <figcaption class="fw-600">سارة أحمد</figcaption>
+                                    <small class="fw-lighter d-block display-sm">CEO, ABC Corporation </small>
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="said-wrap">
+                        <blockquote class="said_wrap-content bg-white p-4 text-center rounded-3">
+                            <h6>Dependable, Responsive, Professional Partner</h6>
+                            <p class="mb-0 display-md">
+                                Fermin Apps has collaborated with Landify team for several projects
+                                such as Photo Sharing Apps and Custom Social Networking Apps. The
+                                experience has been pleasant, professional and exceeding our
+                                expectations. The team is always thinking beyond the current tasks &
+                                helps us formulate a vision and possibilities for future.
+                            </p>
+                        </blockquote>
+                        <div class="mx-auto mt-4 w-fit">
+                            <div class="d-flex text-white align-items-center">
+                                <div class="flex-shrink-0 me-3">
+                                    <img src="../assets/img/person.jpg" class="avatar-oxl rounded-circle"
+                                        alt="person said roza">
+                                </div>
+                                <figure class="flex-grow-1 mb-0">
+                                    <figcaption class="fw-600">سارة أحمد</figcaption>
+                                    <small class="fw-lighter d-block display-sm">CEO, ABC Corporation </small>
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="said-wrap">
+                        <blockquote class="said_wrap-content bg-white p-4 text-center rounded-3">
+                            <h6>Dependable, Responsive, Professional Partner</h6>
+                            <p class="mb-0 display-md">
+                                Fermin Apps has collaborated with Landify team for several projects
+                                such as Photo Sharing Apps and Custom Social Networking Apps. The
+                                experience has been pleasant, professional and exceeding our
+                                expectations. The team is always thinking beyond the current tasks &
+                                helps us formulate a vision and possibilities for future.
+                            </p>
+                        </blockquote>
+                        <div class="mx-auto mt-4 w-fit">
+                            <div class="d-flex text-white align-items-center">
+                                <div class="flex-shrink-0 me-3">
+                                    <img src="../assets/img/person.jpg" class="avatar-oxl rounded-circle"
+                                        alt="person said roza">
+                                </div>
+                                <figure class="flex-grow-1 mb-0">
+                                    <figcaption class="fw-600">سارة أحمد</figcaption>
+                                    <small class="fw-lighter d-block display-sm">CEO, ABC Corporation </small>
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="said-wrap">
+                        <blockquote class="said_wrap-content bg-white p-4 text-center rounded-3">
+                            <h6>Dependable, Responsive, Professional Partner</h6>
+                            <p class="mb-0 display-md">
+                                Fermin Apps has collaborated with Landify team for several projects
+                                such as Photo Sharing Apps and Custom Social Networking Apps. The
+                                experience has been pleasant, professional and exceeding our
+                                expectations. The team is always thinking beyond the current tasks &
+                                helps us formulate a vision and possibilities for future.
+                            </p>
+                        </blockquote>
+                        <div class="mx-auto mt-4 w-fit">
+                            <div class="d-flex text-white align-items-center">
+                                <div class="flex-shrink-0 me-3">
+                                    <img src="../assets/img/person.jpg" class="avatar-oxl rounded-circle"
+                                        alt="person said roza">
+                                </div>
+                                <figure class="flex-grow-1 mb-0">
+                                    <figcaption class="fw-600">سارة أحمد</figcaption>
+                                    <small class="fw-lighter d-block display-sm">CEO, ABC Corporation </small>
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="said-wrap">
+                        <blockquote class="said_wrap-content bg-white p-4 text-center rounded-3">
+                            <h6>Dependable, Responsive, Professional Partner</h6>
+                            <p class="mb-0 display-md">
+                                Fermin Apps has collaborated with Landify team for several projects
+                                such as Photo Sharing Apps and Custom Social Networking Apps. The
+                                experience has been pleasant, professional and exceeding our
+                                expectations. The team is always thinking beyond the current tasks &
+                                helps us formulate a vision and possibilities for future.
+                            </p>
+                        </blockquote>
+                        <div class="mx-auto mt-4 w-fit">
+                            <div class="d-flex text-white align-items-center">
+                                <div class="flex-shrink-0 me-3">
+                                    <img src="../assets/img/person.jpg" class="avatar-oxl rounded-circle"
+                                        alt="person said roza">
+                                </div>
+                                <figure class="flex-grow-1 mb-0">
+                                    <figcaption class="fw-600">سارة أحمد</figcaption>
+                                    <small class="fw-lighter d-block display-sm">CEO, ABC Corporation </small>
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="said-wrap">
+                        <blockquote class="said_wrap-content bg-white p-4 text-center rounded-3">
+                            <h6>Dependable, Responsive, Professional Partner</h6>
+                            <p class="mb-0 display-md">
+                                Fermin Apps has collaborated with Landify team for several projects
+                                such as Photo Sharing Apps and Custom Social Networking Apps. The
+                                experience has been pleasant, professional and exceeding our
+                                expectations. The team is always thinking beyond the current tasks &
+                                helps us formulate a vision and possibilities for future.
+                            </p>
+                        </blockquote>
+                        <div class="mx-auto mt-4 w-fit">
+                            <div class="d-flex text-white align-items-center">
+                                <div class="flex-shrink-0 me-3">
+                                    <img src="../assets/img/person.jpg" class="avatar-oxl rounded-circle"
+                                        alt="person said roza">
+                                </div>
+                                <figure class="flex-grow-1 mb-0">
+                                    <figcaption class="fw-600">سارة أحمد</figcaption>
+                                    <small class="fw-lighter d-block display-sm">CEO, ABC Corporation </small>
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Footer -->
+        <footer id="main-footer" class="position-relative overflow-hidden py-5">
+            <img src="../assets/img/bg-flower.png" class="main_footer-img position-absolute user-select-none"
+                draggable="false" alt="background flower" width="100">
+
+            <div class="main_footer-content container">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="text-center text-md-start">
+                            <a href="index.html">
+                                <img src="../assets/img/logo.png" width="120" alt="roza logo">
+                            </a>
+
+                            <p class="text-dark-primary my-4">
+                                جميع الحقوق محفوظة
+
+                                &copy;
+
+                                <script>
+                                    document.write(new Date().getFullYear())
+
+                                </script>
+                            </p>
+
+                            <ul
+                                class="list-unstyled m-0 p-0 d-flex gap-3 justify-content-center justify-content-md-start">
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="flex-center hover-effect avatar-xlg bg-black bg-opacity-10 text-black rounded-circle">
+                                        <i class="la la-youtube-play display-xomd"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="flex-center hover-effect avatar-xlg bg-black bg-opacity-10 text-black rounded-circle">
+                                        <i class="lab la-twitter display-xomd"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="flex-center hover-effect avatar-xlg bg-black bg-opacity-10 text-black rounded-circle">
+                                        <i class="lab la-dribbble display-xomd"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="flex-center hover-effect avatar-xlg bg-black bg-opacity-10 text-black rounded-circle">
+                                        <i class="lab la-instagram display-xomd"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <article>
+                            <h5 class="text-dark-primary mb-4">
+                                روابط سريعة
+                            </h5>
+                            <div class="d-flex flex-column gap-2">
+                                <a class="text-dark-primary" href="index.html">الرئيسية</a>
+                                <a class="text-dark-primary" href="who-we-are.html">من نحن</a>
+                                <a class="text-dark-primary" href="products.html">منتجاتنا</a>
+                                <a class="text-dark-primary" href="last-offers.html">آخر العروض</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <article>
+                            <h5 class="text-dark-primary mb-4">
+                                مساعدة
+                            </h5>
+                            <div class="d-flex flex-column gap-2">
+                                <a class="text-dark-primary" href="contact-us.html">اتصل بنا</a>
+                                <a class="text-dark-primary" href="#">سياسة الشحن</a>
+                                <a class="text-dark-primary" href="#">الشروط والأحكام</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <article>
+                            <h5 class="text-dark-primary mb-4">
+                                اشترك في النشرة البريدية
+                            </h5>
+                            <form>
+                                <div class="d-flex w-lg-65 p-1 custom-email align-items-center rounded-2">
+                                    <input type="email" name="youremail"
+                                        class="form-control rounded-2 w-100 border-0 pe-0"
+                                        placeholder="بريدك الإلكتروني">
+                                    <button class="btn py-0 pe-2 ps-1 display-xomd text-primary rounded-2"
+                                        type="submit">
+                                        <i class="lab la-telegram-plane align-middle"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <!-- Scripts -->
+    <!-- Important : Bootstrap 5 not depend on jquery -->
+    <script src="../js/libs/bootstrap.bundle.min.js"></script>
+    <script src="../js/libs/jquery-3.5.1.min.js"></script>
+    <script src="../js/libs/jquery.nice-select.min.js"></script>
+    <script src="../js/libs/jquery.lazyload.min.js"></script>
+    <script src="../js/libs/owl.carousel.min.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
