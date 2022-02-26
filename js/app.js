@@ -1,5 +1,14 @@
 $(function () {
   const loaderTag = $(".page-loader");
+  const tooltipTriggerList = $('[data-bs-toggle="tooltip"]');
+  const productOrderSelect = $("#orderProductsSelect");
+  const carouselSaid = ".owl-carousel";
+  const productsFilterNavLinks = $("#v-pills-tab .nav-link");
+  const readyMessageWrap = $(".ready-message-wrap");
+  const textAreaCustomMessage = $(".custom-message-input");
+  const toggleCustomMessageBTN = $(".toggle-custom-message");
+  const quantityButtons = $(".quantity-buttons");
+
   const CAROUSEL_SETTINGS_SAID = {
     dots: true,
     rtl: true,
@@ -16,26 +25,16 @@ $(function () {
       },
     },
   };
-  const CAROUSEL_SETTINGS_READY_MESSAGE = {
+  const Carousal_Public_Options = (margin = 10, items = 3) => ({
     rtl: true,
     nav: true,
-    margin: 10,
+    margin,
     dots: false,
     autoWidth: true,
-    items: 3,
-    lazyload: true,
-  };
-  const tooltipTriggerList = $('[data-bs-toggle="tooltip"]');
-  const productOrderSelect = $("#orderProductsSelect");
-  const carouselSaid = ".owl-carousel";
-  const productsFilterNavLinks = $("#v-pills-tab .nav-link");
-  const readyMessageWrap = $(".ready-message-wrap");
-  const textAreaCustomMessage = $(".custom-message-input");
-  const toggleCustomMessageBTN = $(".toggle-custom-message");
-  const quantityButtons = $(".quantity-buttons");
+    items,
+  });
 
   let readyMessageInput;
-  let enableCustomMessage = false;
 
   // page loader
   loaderTag.find(".page-loader").animate(
@@ -55,7 +54,11 @@ $(function () {
   // Carousels
   if ($(carouselSaid).length) {
     // Said Section
-    if ($(carouselSaid).not(".ready-message-wrap").length) {
+    if (
+      $(carouselSaid).not(
+        ".ready-message-wrap,.flower-type ,.select-thecover, .owl6items"
+      ).length
+    ) {
       $(carouselSaid)
         .not(".ready-message-wrap")
         .owlCarousel(CAROUSEL_SETTINGS_SAID);
@@ -63,8 +66,17 @@ $(function () {
     // Product Details Select Ready message
     if ($(`${carouselSaid}.ready-message-wrap`).length > 0) {
       $(`${carouselSaid}.ready-message-wrap`).owlCarousel(
-        CAROUSEL_SETTINGS_READY_MESSAGE
+        Carousal_Public_Options()
       );
+    }
+
+    // Flowers Carousal
+    if ($(`${carouselSaid}.flower-type`).length > 0) {
+      $(`.flower-type`).owlCarousel(Carousal_Public_Options(20, 4));
+    }
+    // Other Carousal (Cover)
+    if ($(`${carouselSaid}.owl6items`).length > 0) {
+      $(`.owl6items`).owlCarousel(Carousal_Public_Options(10, 6));
     }
   }
   //  Enable Tootip bootstrap
