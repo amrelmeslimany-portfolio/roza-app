@@ -93,25 +93,27 @@ $(function () {
 
   // Handle Quantity Buttons in Product details
   if (quantityButtons.length) {
-    let [minusBTN, inputCounter, plusBTN] = [
-      quantityButtons.find(".minus"),
-      quantityButtons.find("input"),
-      quantityButtons.find(".plus"),
-    ];
-    let counterNumber = inputCounter.val();
+    quantityButtons.each(function () {
+      let [minusBTN, inputCounter, plusBTN] = [
+        $(this).find(".minus"),
+        $(this).find("input"),
+        $(this).find(".plus"),
+      ];
+      let counterNumber = inputCounter.val();
 
-    minusBTN.on("click", function () {
-      if (counterNumber > 1) {
-        counterNumber--;
-        inputCounter.val(counterNumber);
-      }
-    });
+      minusBTN.on("click", function () {
+        if (counterNumber > 1) {
+          counterNumber--;
+          inputCounter.val(counterNumber);
+        }
+      });
 
-    plusBTN.on("click", function () {
-      if (counterNumber < +inputCounter.attr("max")) {
-        counterNumber++;
-        inputCounter.val(counterNumber);
-      }
+      plusBTN.on("click", function () {
+        if (counterNumber < +inputCounter.attr("max")) {
+          counterNumber++;
+          inputCounter.val(counterNumber);
+        }
+      });
     });
   }
 
@@ -168,7 +170,7 @@ $(function () {
         textarea.prop("disabled", true);
         enableCustomMessage = false;
         readyMessageInput.removeAttr("disabled");
-        readyMessageWrap.removeAttr("css");
+        readyMessageWrap.removeAttr("style");
         readyMessageWrap.removeClass("opacity-25");
         enable = true;
       }
