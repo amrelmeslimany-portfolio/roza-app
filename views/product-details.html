@@ -60,7 +60,7 @@
                         <div class="d-flex justify-content-between py-2 py-md-0 align-items-center">
                             <a href="signin.html" class="me-3 text-dark-primary">تسجيل الدخول</a>
                             <a href="shopping-cart.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                title="Go to shopping cart">
+                                title="اذهب لسلة المشتريات">
                                 <i
                                     class="text-dark-primary hover-effect las la-shopping-bag align-middle display-xomd position-relative">
                                     <small
@@ -173,7 +173,8 @@
                             <div>
                                 <h5 class="text-primary mb-2">اختر رسالة جاهزة:</h5>
                                 <div class="owl-carousel ready-message-wrap d-flex">
-                                    <div class="position-relative ready-message-item text-center select">
+                                    <div data-readymessage="message-1"
+                                        class="position-relative ready-message-item text-center select">
                                         <img class="lazyload" src="../assets/img/loader.gif"
                                             data-original="../assets/img/flowers/tablue.jpg" alt="message ready">
 
@@ -183,7 +184,8 @@
 
                                         <span class="fw-bold text-primary mt-1 d-block display-sm">10 ر.س</span>
                                     </div>
-                                    <div class="position-relative ready-message-item text-center">
+                                    <div data-readymessage="message-2"
+                                        class="position-relative ready-message-item text-center">
                                         <img class="lazyload" src="../assets/img/loader.gif"
                                             data-original="../assets/img/flowers/tablue.jpg" alt="message ready">
 
@@ -193,7 +195,8 @@
 
                                         <span class="fw-bold text-primary mt-1 d-block display-sm">10 ر.س</span>
                                     </div>
-                                    <div class="position-relative ready-message-item text-center">
+                                    <div data-readymessage="message-3"
+                                        class="position-relative ready-message-item text-center">
                                         <img class="lazyload" src="../assets/img/loader.gif"
                                             data-original="../assets/img/flowers/tablue.jpg" alt="message ready">
 
@@ -203,7 +206,8 @@
 
                                         <span class="fw-bold text-primary mt-1 d-block display-sm">10 ر.س</span>
                                     </div>
-                                    <div class="position-relative ready-message-item text-center">
+                                    <div data-readymessage="message-4"
+                                        class="position-relative ready-message-item text-center">
                                         <img class="lazyload" src="../assets/img/loader.gif"
                                             data-original="../assets/img/flowers/tablue.jpg" alt="message ready">
 
@@ -214,7 +218,7 @@
                                         <span class="fw-bold text-primary mt-1 d-block display-sm">10 ر.س</span>
                                     </div>
                                 </div>
-                                <input type="hidden" name="choosedMessage">
+                                <input type="hidden" value="message-1" name="choosedMessage">
                             </div>
                             <!-- Custom Your Message -->
                             <article>

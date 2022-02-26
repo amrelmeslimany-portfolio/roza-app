@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roza - سلة المشتريات</title>
+    <meta name="language" content="Arabic">
+    <meta name="description" content="Roza متجر لبيع الورود وفازات الورود" />
+    <meta name="keywords" content="roza, ورد">
+    <meta name="theme-color" content="#4f4d8c">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/libs/line-awesome.min.css">
+    <link rel="stylesheet" href="../css/libs/owl.carousel.css">
+    <link rel="stylesheet" href="../css/libs/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="page-loader d-flex flex-column text-center">
+            <img src="../assets/img/logo.png" class="logo-loader mb-3" alt="roza logo">
+            <span>جاري التحميل ..</span>
+            <img src="../assets/img/bg-flower.png" draggable="false" class="bg-flower-loader user-select-none"
+                alt="background roza flower">
+        </div>
+    </div>
+
+    <div class="wrap-full-page">
+        <!-- Header (Navbar & Header Intro) -->
+        <header id="main-header">
+            <nav class="navbar navbar-expand-md navbar-light border-bottom border-md-0 py-2 mb-4">
+                <div class="container">
+                    <a class="navbar-brand ms-0 me-1" href="index.html">
+                        <img src="../assets/img/logo.png" width="120" alt="roza logo">
+                    </a>
+                    <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbarTop" aria-controls="mainNavbarTop" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="las la-bars text-dark-primary display-6"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mainNavbarTop">
+                        <ul class="navbar-nav mx-auto mb-2 mb-md-0 ps-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark-primary px-4" href="who-we-are.html">من نحن</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark-primary px-4" href="products.html">منتجاتنا</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark-primary px-4" href="special-bouquet.html">باقة مخصصة</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark-primary px-4" href="contact-us.html">اتصل بنا</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex justify-content-between py-2 py-md-0 align-items-center">
+                            <a href="signin.html" class="me-3 text-dark-primary">تسجيل الدخول</a>
+                            <div class="position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                title="انت فى سلة المشتريات">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                    width="24" height="24" x="0" y="0" viewBox="0 0 448 448"
+                                    style="enable-background:new 0 0 512 512" xml:space="preserve">
+                                    <g>
+                                        <g xmlns="http://www.w3.org/2000/svg">
+                                            <g id="bag">
+                                                <path
+                                                    d="m383.921 143.04c-.508-8.46-7.525-15.055-16-15.04h-64v-48c0-44.183-35.817-80-80-80s-80 35.817-80 80v48h-64c-8.475-.015-15.492 6.58-16 15.04l-14.08 254.24c-1.502 26.467 18.736 49.141 45.203 50.643.931.053 1.864.079 2.797.077h252.32c26.51.043 48.034-21.413 48.077-47.923.002-.933-.024-1.866-.077-2.797zm-208-63.04c0-26.51 21.49-48 48-48s48 21.49 48 48v48h-96z"
+                                                    fill="#2f4159" data-original="#000000" class=""></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <small
+                                    class="position-absolute top-0 end-50 badge rounded-circle bg-danger flex-center avatar-sm display-oxs border ">
+                                    2
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Body Content -->
+        <div class="py-5 container">
+            <!-- Breadcumb -->
+            <ul class="nav justify-content-center mb-5">
+                <li class="nav-item">
+                    <span class="nav-link fw-600 display-omd active">سلة المشتريات</span>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link px-1 disabled"><i
+                            class="las la-angle-left fw-600 display-lg align-text-bottom"></i></span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-600 display-omd disabled text-muted" href="#">بيانات التوصيل والدفع</a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link px-1 disabled"><i
+                            class="las la-angle-left fw-600 display-lg align-text-bottom"></i></span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-600 display-omd disabled text-muted" href="#">اتمام الشراء</a>
+                </li>
+            </ul>
+
+
+            <!-- Cart Products !! (Hide this if you want to show no cart items "display:none") -->
+            <div>
+                <div class="table-responsive">
+                    <table class="table table-nowrap align-middle w-100 w-md-90 mx-auto">
+                        <thead>
+                            <tr>
+                                <th class="text-primary fw-600 display-omd py-4">
+                                    المنتج
+                                </th>
+                                <th class="text-primary fw-600 display-omd py-4">
+                                    السعر
+                                </th>
+                                <th class="text-primary fw-600 display-omd py-4">
+                                    الكمية
+                                </th>
+                                <th class="text-primary fw-600 display-omd py-4">
+                                    المجموع
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="../assets/img/loader.gif" data-original="../assets/img/flowers/bouqet.png"
+                                        width="100" class="me-3 lazyload" alt="بوكيه ورد فاظة ورد كارت">
+                                    <h5 class="text-black-50 d-inline-block me-5">اسم المنتج م</h5>
+                                </td>
+                                <td>
+                                    <h5 class="text-dark-primary me-5">25 ر.س</h5>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-lg border border-2 rounded-3 overflow-hidden me-5 quantity-buttons"
+                                        role="group" aria-label="Basic example">
+                                        <button type="button" class="py-1 btn btn-light minus">-</button>
+                                        <input type="number" class="py-1 text-center form-control border-0 w-fit"
+                                            value="1" min="1" max="56" name="quantity">
+                                        <button type="button" class="py-1 btn btn-primary plus">+</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h5 class="text-dark-primary me-5">50 ر.س</h5>
+                                </td>
+                                <td>
+                                    <button class="btn rounded-3 btn-lg">
+                                        <i class="las la-trash-alt text-danger display-lg align-text-bottom"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../assets/img/loader.gif" data-original="../assets/img/flowers/bouqet.png"
+                                        width="100" class="me-3 lazyload" alt="بوكيه ورد فاظة ورد كارت">
+                                    <h5 class="text-black-50 d-inline-block me-5">اسم المنتج م</h5>
+                                </td>
+                                <td>
+                                    <h5 class="text-dark-primary me-5">25 ر.س</h5>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-lg border border-2 rounded-3 overflow-hidden me-5 quantity-buttons"
+                                        role="group" aria-label="Basic example">
+                                        <button type="button" class="py-1 btn btn-light minus">-</button>
+                                        <input type="number" class="py-1 text-center form-control border-0 w-fit"
+                                            value="1" min="1" max="56" name="quantity">
+                                        <button type="button" class="py-1 btn btn-primary plus">+</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h5 class="text-dark-primary me-5">50 ر.س</h5>
+                                </td>
+                                <td>
+                                    <button class="btn rounded-3 btn-lg">
+                                        <i class="las la-trash-alt text-danger display-lg align-text-bottom"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="ps-md-5 mt-4">
+                    <article>
+                        <h6 class="display-omd me-1 d-inline-block fw-600 text-primary">المجموع:</h6>
+                        <strong class="display-omd">105 ر.س</strong>
+                    </article>
+                    <article>
+                        <h6 class="display-omd me-1 d-inline-block fw-600 text-primary">الاجمالي:</h6>
+                        <strong class="display-omd">105 ر.س</strong>
+                        <p class="text-muted fw-600 d-inline mb-0">منهم ( 16 ر.س ضربية القيمة المضافة )</p>
+                    </article>
+                    <div class="mt-4">
+                        <a href="payment-form.html" class="btn btn-primary custom-rounded display-md px-4 py-2"
+                            type="submit">التقدم لاتمام
+                            الطلب</a>
+                        <a href="products.html"
+                            class="btn btn-outline-primary border border-primary custom-rounded display-md px-4 py-2">متابعة
+                            التسوق</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- !If no items in cart !! ( add  "display: none" if you want to hide this ) -->
+            <div class="py-5 d-flex text-center align-items-center justify-content-center flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="250" height="250" viewBox="0 0 172 172"
+                    style=" fill:#000000;">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                        <g fill="#e6e7e8">
+                            <path
+                                d="M166.625,21.5h-32.25c-2.35425,0 -4.429,1.5265 -5.12775,3.77325l-25.69788,82.22675h-77.8515l-15.10912,-60.43112c-0.72025,-2.87562 -3.64425,-4.63325 -6.5145,-3.90763c-2.881,0.72025 -4.63325,3.63888 -3.913,6.51988l16.125,64.5c0.602,2.39187 2.74663,4.06887 5.21375,4.06887h86c2.35425,0 4.429,-1.5265 5.12775,-3.77325l25.69787,-82.22675h28.29938c2.97237,0 5.375,-2.408 5.375,-5.375c0,-2.967 -2.40263,-5.375 -5.375,-5.375z">
+                            </path>
+                            <path
+                                d="M53.75,139.75c0,-8.89025 -7.23475,-16.125 -16.125,-16.125c-8.89025,0 -16.125,7.23475 -16.125,16.125c0,8.89025 7.23475,16.125 16.125,16.125c8.89025,0 16.125,-7.23475 16.125,-16.125zM32.25,139.75c0,-2.96162 2.408,-5.375 5.375,-5.375c2.967,0 5.375,2.41338 5.375,5.375c0,2.96162 -2.408,5.375 -5.375,5.375c-2.967,0 -5.375,-2.41338 -5.375,-5.375z">
+                            </path>
+                            <path
+                                d="M107.5,139.75c0,-8.89025 -7.23475,-16.125 -16.125,-16.125c-8.89025,0 -16.125,7.23475 -16.125,16.125c0,8.89025 7.23475,16.125 16.125,16.125c8.89025,0 16.125,-7.23475 16.125,-16.125zM86,139.75c0,-2.96162 2.408,-5.375 5.375,-5.375c2.967,0 5.375,2.41338 5.375,5.375c0,2.96162 -2.408,5.375 -5.375,5.375c-2.967,0 -5.375,-2.41338 -5.375,-5.375z">
+                            </path>
+                            <path
+                                d="M102.125,64.5c0,-20.7475 -16.88287,-37.625 -37.625,-37.625c-20.74213,0 -37.625,16.8775 -37.625,37.625c0,20.7475 16.88287,37.625 37.625,37.625c20.74213,0 37.625,-16.8775 37.625,-37.625zM37.625,64.5c0,-14.81887 12.05613,-26.875 26.875,-26.875c14.81887,0 26.875,12.05613 26.875,26.875c0,14.81887 -12.05613,26.875 -26.875,26.875c-14.81887,0 -26.875,-12.05613 -26.875,-26.875z">
+                            </path>
+                            <path
+                                d="M71.44987,79.05013c1.04812,1.04812 2.42413,1.57487 3.80013,1.57487c1.376,0 2.752,-0.52675 3.80013,-1.57487c2.10162,-2.10162 2.10162,-5.49863 0,-7.60025l-6.94988,-6.94988l6.94987,-6.94987c2.10162,-2.10162 2.10162,-5.49862 0,-7.60025c-2.10162,-2.10162 -5.49863,-2.10162 -7.60025,0l-6.94987,6.94987l-6.94987,-6.94987c-2.10162,-2.10162 -5.49862,-2.10162 -7.60025,0c-2.10162,2.10162 -2.10162,5.49862 0,7.60025l6.94987,6.94987l-6.94987,6.94987c-2.10162,2.10162 -2.10162,5.49863 0,7.60025c1.04812,1.04812 2.42412,1.57488 3.80012,1.57488c1.376,0 2.752,-0.52675 3.80013,-1.57487l6.94987,-6.94988z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+
+                <p class="text-black-50 display-omd mb-4 mt-3">لا توجد منتجات في سلة المشتريات.</p>
+
+                <a href="products.html" class="btn btn-primary custom-rounded display-md px-5 py-2">تصفح
+                    منتجاتنا</a>
+            </div>
+
+        </div>
+        <!-- Main Footer -->
+        <footer id="main-footer" class="position-relative overflow-hidden py-5">
+            <img src="../assets/img/bg-flower.png" class="main_footer-img position-absolute user-select-none"
+                draggable="false" alt="background flower" width="100">
+
+            <div class="main_footer-content container">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="text-center text-md-start">
+                            <a href="index.html">
+                                <img src="../assets/img/logo.png" width="120" alt="roza logo">
+                            </a>
+
+                            <p class="text-dark-primary my-4">
+                                جميع الحقوق محفوظة
+
+                                &copy;
+
+                                <script>
+                                    document.write(new Date().getFullYear())
+
+                                </script>
+                            </p>
+
+                            <ul
+                                class="list-unstyled m-0 p-0 d-flex gap-3 justify-content-center justify-content-md-start">
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="flex-center hover-effect avatar-xlg bg-black bg-opacity-10 text-black rounded-circle">
+                                        <i class="la la-youtube-play display-xomd"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="flex-center hover-effect avatar-xlg bg-black bg-opacity-10 text-black rounded-circle">
+                                        <i class="lab la-twitter display-xomd"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="flex-center hover-effect avatar-xlg bg-black bg-opacity-10 text-black rounded-circle">
+                                        <i class="lab la-dribbble display-xomd"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"
+                                        class="flex-center hover-effect avatar-xlg bg-black bg-opacity-10 text-black rounded-circle">
+                                        <i class="lab la-instagram display-xomd"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <article>
+                            <h5 class="text-dark-primary mb-4">
+                                روابط سريعة
+                            </h5>
+                            <div class="d-flex flex-column gap-2">
+                                <a class="text-dark-primary" href="index.html">الرئيسية</a>
+                                <a class="text-dark-primary" href="who-we-are.html">من نحن</a>
+                                <a class="text-dark-primary" href="products.html">منتجاتنا</a>
+                                <a class="text-dark-primary" href="last-offers.html">آخر العروض</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <article>
+                            <h5 class="text-dark-primary mb-4">
+                                مساعدة
+                            </h5>
+                            <div class="d-flex flex-column gap-2">
+                                <a class="text-dark-primary" href="contact-us.html">اتصل بنا</a>
+                                <a class="text-dark-primary" href="#">سياسة الشحن</a>
+                                <a class="text-dark-primary" href="#">الشروط والأحكام</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <article>
+                            <h5 class="text-dark-primary mb-4">
+                                اشترك في النشرة البريدية
+                            </h5>
+                            <form>
+                                <div class="d-flex w-lg-65 p-1 custom-email align-items-center rounded-2">
+                                    <input type="email" name="youremail"
+                                        class="form-control rounded-2 w-100 border-0 pe-0"
+                                        placeholder="بريدك الإلكتروني">
+                                    <button class="btn py-0 pe-2 ps-1 display-xomd rounded-2 text-primary"
+                                        type="submit">
+                                        <i class="lab la-telegram-plane align-middle"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Scripts -->
+    <!-- Important : Bootstrap 5 not depend on jquery -->
+    <script src="../js/libs/bootstrap.bundle.min.js"></script>
+    <script src="../js/libs/jquery-3.5.1.min.js"></script>
+    <script src="../js/libs/jquery.lazyload.min.js"></script>
+    <script src="../js/libs/owl.carousel.min.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
