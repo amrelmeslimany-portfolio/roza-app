@@ -19,6 +19,7 @@
 
 <body>
 
+
     <!-- Page Loader -->
     <div class="page-loader">
         <div class="page-loader d-flex flex-column text-center">
@@ -94,132 +95,132 @@
                             <article class="mb-4">
                                 <h6 class="mb-2">الوردة والعدد:</h6>
                                 <div class="owl-carousel flower-type d-flex">
-                                    <div class="d-flex flower_type-item">
+                                    <div class="d-flex select flower_type-item">
                                         <div data-flower='../assets/img/custom-card/flower-red.png'
-                                            class="position-relative text-center select flower_type_item-img">
+                                            class="position-relative text-center flower_type_item-img">
                                             <img src="../assets/img/custom-card/flower-red.png" alt="message ready">
                                             <small class="badge bg-primary">
                                                 <i class="las la-check-circle"></i>
                                             </small>
                                             <span class="fw-bold text-primary mt-1 d-block display-sm">10 ر.س</span>
                                         </div>
-                                        <input type="hidden" value="flower-red" disabled name="choosedFlower[]">
+                                        <input type="hidden" value="flower-red" name="floweres[][type]">
                                         <div class="quantity-buttons btn-group btn-group-vertical btn-group-sm px-0 border border-2 rounded-3 overflow-hidden ms-2 flex-shrink-0"
                                             role="group" aria-label="Basic example">
                                             <button type="button" class="p-1 btn btn-primary plus">+</button>
                                             <input type="number" class="p-1 text-center form-control border-0" value="1"
-                                                min="1" max="56" name="quantityFlower[]">
+                                                min="1" max="56" name="floweres[][quantity]">
                                             <button type="button" class="p-1 btn btn-light minus">-</button>
                                         </div>
                                     </div>
-                                    <div class="d-flex select flower_type-item">
+                                    <div class="d-flex flower_type-item">
                                         <div data-flower='../assets/img/custom-card/flower-pink.png'
-                                            class="position-relative text-center select flower_type_item-img">
+                                            class="position-relative text-center flower_type_item-img">
                                             <img src="../assets/img/custom-card/flower-pink.png" alt="message ready">
                                             <small class="badge bg-primary">
                                                 <i class="las la-check-circle"></i>
                                             </small>
                                             <span class="fw-bold text-primary mt-1 d-block display-sm">10 ر.س</span>
                                         </div>
-                                        <input type="hidden" value="flower-pink" name="choosedFlower[]">
+                                        <input type="hidden" value="flower-pink" disabled name="floweres[][type]">
                                         <div class="quantity-buttons btn-group btn-group-vertical btn-group-sm px-0 border border-2 rounded-3 overflow-hidden ms-2 flex-shrink-0"
                                             role="group" aria-label="Basic example">
                                             <button type="button" class="p-1 btn btn-primary plus">+</button>
                                             <input type="number" class="p-1 text-center form-control border-0" value="1"
-                                                min="1" max="56" name="quantityFlower[]">
+                                                min="1" max="56" name="floweres[][quantity]" disabled>
 
                                             <button type="button" class="p-1 btn btn-light minus">-</button>
                                         </div>
                                     </div>
                                     <div class="d-flex flower_type-item">
-                                        <div data-flower='../assets/img/custom-card/flower-white.png"'
-                                            class="position-relative text-center select flower_type_item-img">
+                                        <div data-flower='../assets/img/custom-card/flower-white.png'
+                                            class="position-relative text-center  flower_type_item-img">
                                             <img src="../assets/img/custom-card/flower-white.png" alt="message ready">
                                             <small class="badge bg-primary">
                                                 <i class="las la-check-circle"></i>
                                             </small>
                                             <span class="fw-bold text-primary mt-1 d-block display-sm">10 ر.س</span>
                                         </div>
-                                        <input type="hidden" value="flower-white" disabled name="choosedFlower[]">
+                                        <input type="hidden" value="flower-white" disabled name="floweres[][type]">
                                         <div class="quantity-buttons btn-group btn-group-vertical btn-group-sm px-0 border border-2 rounded-3 overflow-hidden ms-2 flex-shrink-0"
                                             role="group" aria-label="Basic example">
                                             <button type="button" class="p-1 btn btn-primary plus">+</button>
                                             <input type="number" class="p-1 text-center form-control border-0" value="1"
-                                                min="1" max="56" name="quantityFlower[]">
-
-                                            <button type="button" class="p-1 btn btn-light minus">-</button>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flower_type-item">
-                                        <div data-flower='../assets/img/custom-card/flower-red.png'
-                                            class="position-relative text-center select flower_type_item-img">
-                                            <img src="../assets/img/custom-card/flower-red.png" alt="message ready">
-                                            <small class="badge bg-primary">
-                                                <i class="las la-check-circle"></i>
-                                            </small>
-                                            <span class="fw-bold text-primary mt-1 d-block display-sm">10 ر.س</span>
-                                        </div>
-                                        <input type="hidden" value="flower-red" disabled name="choosedFlower[]">
-                                        <div class="quantity-buttons btn-group btn-group-vertical btn-group-sm px-0 border border-2 rounded-3 overflow-hidden ms-2 flex-shrink-0"
-                                            role="group" aria-label="Basic example">
-                                            <button type="button" class="p-1 btn btn-primary plus">+</button>
-                                            <input type="number" class="p-1 text-center form-control border-0" value="1"
-                                                min="1" max="56" name="quantityFlower[]">
-                                            <button type="button" class="p-1 btn btn-light minus">-</button>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flower_type-item">
-                                        <div data-flower='../assets/img/custom-card/flower-white.png"'
-                                            class="position-relative text-center select flower_type_item-img">
-                                            <img src="../assets/img/custom-card/flower-white.png" alt="message ready">
-                                            <small class="badge bg-primary">
-                                                <i class="las la-check-circle"></i>
-                                            </small>
-                                            <span class="fw-bold text-primary mt-1 d-block display-sm">10 ر.س</span>
-                                        </div>
-                                        <input type="hidden" value="flower-white" disabled name="choosedFlower[]">
-                                        <div class="quantity-buttons btn-group btn-group-vertical btn-group-sm px-0 border border-2 rounded-3 overflow-hidden ms-2 flex-shrink-0"
-                                            role="group" aria-label="Basic example">
-                                            <button type="button" class="p-1 btn btn-primary plus">+</button>
-                                            <input type="number" class="p-1 text-center form-control border-0" value="1"
-                                                min="1" max="56" name="quantityFlower[]">
+                                                min="1" max="56" name="floweres[][quantity]" disabled>
 
                                             <button type="button" class="p-1 btn btn-light minus">-</button>
                                         </div>
                                     </div>
                                     <div class="d-flex flower_type-item">
                                         <div data-flower='../assets/img/custom-card/flower-red.png'
-                                            class="position-relative text-center select flower_type_item-img">
+                                            class="position-relative text-center  flower_type_item-img">
                                             <img src="../assets/img/custom-card/flower-red.png" alt="message ready">
                                             <small class="badge bg-primary">
                                                 <i class="las la-check-circle"></i>
                                             </small>
                                             <span class="fw-bold text-primary mt-1 d-block display-sm">10 ر.س</span>
                                         </div>
-                                        <input type="hidden" value="flower-red" disabled name="choosedFlower[]">
+                                        <input type="hidden" value="flower-red" disabled name="floweres[][type]">
                                         <div class="quantity-buttons btn-group btn-group-vertical btn-group-sm px-0 border border-2 rounded-3 overflow-hidden ms-2 flex-shrink-0"
                                             role="group" aria-label="Basic example">
                                             <button type="button" class="p-1 btn btn-primary plus">+</button>
                                             <input type="number" class="p-1 text-center form-control border-0" value="1"
-                                                min="1" max="56" name="quantityFlower[]">
+                                                min="1" max="56" name="floweres[][quantity]" disabled>
                                             <button type="button" class="p-1 btn btn-light minus">-</button>
                                         </div>
                                     </div>
                                     <div class="d-flex flower_type-item">
-                                        <div data-flower='../assets/img/custom-card/flower-white.png"'
-                                            class="position-relative text-center select flower_type_item-img">
+                                        <div data-flower='../assets/img/custom-card/flower-white.png'
+                                            class="position-relative text-center  flower_type_item-img">
                                             <img src="../assets/img/custom-card/flower-white.png" alt="message ready">
                                             <small class="badge bg-primary">
                                                 <i class="las la-check-circle"></i>
                                             </small>
                                             <span class="fw-bold text-primary mt-1 d-block display-sm">10 ر.س</span>
                                         </div>
-                                        <input type="hidden" value="flower-white" disabled name="choosedFlower[]">
+                                        <input type="hidden" value="flower-white" disabled name="floweres[][type]">
                                         <div class="quantity-buttons btn-group btn-group-vertical btn-group-sm px-0 border border-2 rounded-3 overflow-hidden ms-2 flex-shrink-0"
                                             role="group" aria-label="Basic example">
                                             <button type="button" class="p-1 btn btn-primary plus">+</button>
                                             <input type="number" class="p-1 text-center form-control border-0" value="1"
-                                                min="1" max="56" name="quantityFlower[]">
+                                                min="1" max="56" name="floweres[][quantity]" disabled>
+
+                                            <button type="button" class="p-1 btn btn-light minus">-</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flower_type-item">
+                                        <div data-flower='../assets/img/custom-card/flower-red.png'
+                                            class="position-relative text-center  flower_type_item-img">
+                                            <img src="../assets/img/custom-card/flower-red.png" alt="message ready">
+                                            <small class="badge bg-primary">
+                                                <i class="las la-check-circle"></i>
+                                            </small>
+                                            <span class="fw-bold text-primary mt-1 d-block display-sm">10 ر.س</span>
+                                        </div>
+                                        <input type="hidden" value="flower-red" disabled name="floweres[][type]">
+                                        <div class="quantity-buttons btn-group btn-group-vertical btn-group-sm px-0 border border-2 rounded-3 overflow-hidden ms-2 flex-shrink-0"
+                                            role="group" aria-label="Basic example">
+                                            <button type="button" class="p-1 btn btn-primary plus">+</button>
+                                            <input type="number" class="p-1 text-center form-control border-0" value="1"
+                                                min="1" max="56" name="floweres[][quantity]" disabled>
+                                            <button type="button" class="p-1 btn btn-light minus">-</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flower_type-item">
+                                        <div data-flower='../assets/img/custom-card/flower-white.png'
+                                            class="position-relative text-center  flower_type_item-img">
+                                            <img src="../assets/img/custom-card/flower-white.png" alt="message ready">
+                                            <small class="badge bg-primary">
+                                                <i class="las la-check-circle"></i>
+                                            </small>
+                                            <span class="fw-bold text-primary mt-1 d-block display-sm">10 ر.س</span>
+                                        </div>
+                                        <input type="hidden" value="flower-white" disabled name="floweres[][type]">
+                                        <div class="quantity-buttons btn-group btn-group-vertical btn-group-sm px-0 border border-2 rounded-3 overflow-hidden ms-2 flex-shrink-0"
+                                            role="group" aria-label="Basic example">
+                                            <button type="button" class="p-1 btn btn-primary plus">+</button>
+                                            <input type="number" class="p-1 text-center form-control border-0" value="1"
+                                                min="1" max="56" name="floweres[][quantity]" disabled>
 
                                             <button type="button" class="p-1 btn btn-light minus">-</button>
                                         </div>
@@ -235,63 +236,63 @@
                                             class="position-relative text-center select_thecover_item-img">
                                             <img src="../assets/img/custom-card/cover-1.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="cover-1" name="choosedCover[]">
+                                        <input type="hidden" value="cover-1" name="choosedCover">
                                     </div>
                                     <div class="select_thecover-item ">
                                         <div data-cover="../assets/img/custom-card/cover-2.jpg"
                                             class="position-relative text-center select_thecover_item-img">
                                             <img src="../assets/img/custom-card/cover-2.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="cover-2" name="choosedCover[]">
+                                        <input type="hidden" value="cover-2" name="choosedCover" disabled>
                                     </div>
                                     <div class="select_thecover-item ">
                                         <div data-cover="../assets/img/custom-card/cover-3.jpg"
                                             class="position-relative text-center select_thecover_item-img">
                                             <img src="../assets/img/custom-card/cover-3.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="cover-3" name="choosedCover[]">
+                                        <input type="hidden" value="cover-3" name="choosedCover" disabled>
                                     </div>
                                     <div class="select_thecover-item ">
                                         <div data-cover="../assets/img/custom-card/cover-4.jpg"
                                             class="position-relative text-center select_thecover_item-img">
                                             <img src="../assets/img/custom-card/cover-4.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="cover-4" name="choosedCover[]">
+                                        <input type="hidden" value="cover-4" name="choosedCover" disabled>
                                     </div>
                                     <div class="select_thecover-item ">
                                         <div data-cover="../assets/img/custom-card/cover-5.jpg"
                                             class="position-relative text-center select_thecover_item-img">
                                             <img src="../assets/img/custom-card/cover-5.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="cover-5" name="choosedCover[]">
+                                        <input type="hidden" value="cover-5" name="choosedCover" disabled>
                                     </div>
                                     <div class="select_thecover-item ">
                                         <div data-cover="../assets/img/custom-card/cover-6.jpg"
                                             class="position-relative text-center select_thecover_item-img">
                                             <img src="../assets/img/custom-card/cover-6.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="cover-6" name="choosedCover[]">
+                                        <input type="hidden" value="cover-6" name="choosedCover" disabled>
                                     </div>
                                     <div class="select_thecover-item ">
                                         <div data-cover="../assets/img/custom-card/cover-4.jpg"
                                             class="position-relative text-center select_thecover_item-img">
                                             <img src="../assets/img/custom-card/cover-4.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="cover-4" name="choosedCover[]">
+                                        <input type="hidden" value="cover-4" name="choosedCover" disabled>
                                     </div>
                                     <div class="select_thecover-item ">
                                         <div data-cover="../assets/img/custom-card/cover-5.jpg"
                                             class="position-relative text-center select_thecover_item-img">
                                             <img src="../assets/img/custom-card/cover-5.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="cover-5" name="choosedCover[]">
+                                        <input type="hidden" value="cover-5" name="choosedCover" disabled>
                                     </div>
                                     <div class="select_thecover-item ">
                                         <div data-cover="../assets/img/custom-card/cover-6.jpg"
                                             class="position-relative text-center select_thecover_item-img">
                                             <img src="../assets/img/custom-card/cover-6.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="cover-6" name="choosedCover[]">
+                                        <input type="hidden" value="cover-6" name="choosedCover" disabled>
                                     </div>
                                 </div>
                             </article>
@@ -300,53 +301,49 @@
                                 <h6 class="mb-2">الشريط:</h6>
                                 <div class="owl-carousel select-tap owl6items d-flex">
                                     <div class="select_tap-item select">
-                                        <div data-tapcolor="red" class="select_tap_item-img rounded-circle">
+                                        <div data-tapcolor="black" class="select_tap_item-img rounded-circle">
                                         </div>
-                                        <input type="hidden" value="red-1" name="tapcolor[]">
+                                        <input type="hidden" value="black" name="tapcolor">
                                     </div>
                                     <div class="select_tap-item ">
-                                        <div data-tapcolor="yellow" class="select_tap_item-img rounded-circle">
+                                        <div data-tapcolor="#533E85" class="select_tap_item-img rounded-circle">
                                         </div>
-                                        <input type="hidden" value="yellow-tap" name="tapcolor[]">
+                                        <input type="hidden" value="#533E85-tap" name="tapcolor" disabled>
                                     </div>
                                     <div class="select_tap-item ">
-                                        <div data-tapcolor="blue" class="select_tap_item-img rounded-circle">
+                                        <div data-tapcolor="#488FB1" class="select_tap_item-img rounded-circle">
                                         </div>
-                                        <input type="hidden" value="blue-tap" name="tapcolor[]">
+                                        <input type="hidden" value="#488FB1-tap" name="tapcolor" disabled>
                                     </div>
                                     <div class="select_tap-item ">
-                                        <div data-tapcolor="#bbb" class="select_tap_item-img rounded-circle">
+                                        <div data-tapcolor="#4FD3C4" class="select_tap_item-img rounded-circle">
                                         </div>
-                                        <input type="hidden" value="#bbb-tap" name="tapcolor[]">
+                                        <input type="hidden" value="#4FD3C4-tap" name="tapcolor" disabled>
+                                    </div>
+                                    <div class="select_tap-item">
+                                        <div data-tapcolor="#C1F8CF" class="select_tap_item-img rounded-circle">
+                                        </div>
+                                        <input type="hidden" value="#C1F8CF-tap" name="tapcolor" disabled>
                                     </div>
                                     <div class="select_tap-item ">
-                                        <div data-tapcolor="green" class="select_tap_item-img rounded-circle">
+                                        <div data-tapcolor="#1DB9C3" class="select_tap_item-img rounded-circle">
                                         </div>
-                                        <input type="hidden" value="green-tap" name="tapcolor[]">
+                                        <input type="hidden" value="#1DB9C3-tap" name="tapcolor" disabled>
                                     </div>
                                     <div class="select_tap-item ">
-                                        <div data-tapcolor="#bbb" class="select_tap_item-img rounded-circle">
+                                        <div data-tapcolor="#7027A0" class="select_tap_item-img rounded-circle">
                                         </div>
-                                        <input type="hidden" value="#bbb-tap" name="tapcolor[]">
+                                        <input type="hidden" value="#7027A0-tap" name="tapcolor" disabled>
                                     </div>
                                     <div class="select_tap-item ">
-                                        <div data-tapcolor="green" class="select_tap_item-img rounded-circle">
+                                        <div data-tapcolor="#C32BAD" class="select_tap_item-img rounded-circle">
                                         </div>
-                                        <input type="hidden" value="green-tap" name="tapcolor[]">
+                                        <input type="hidden" value="#C32BAD-tap" name="tapcolor" disabled>
                                     </div>
-                                    <div class="select_tap-item ">
-                                        <div data-tapcolor="#bbb" class="select_tap_item-img rounded-circle">
-                                        </div>
-                                        <input type="hidden" value="#bbb-tap" name="tapcolor[]">
-                                    </div>
-                                    <div class="select_tap-item ">
-                                        <div data-tapcolor="green" class="select_tap_item-img rounded-circle">
-                                        </div>
-                                        <input type="hidden" value="green-tap" name="tapcolor[]">
-                                    </div>
+
                                 </div>
                             </article>
-                            <!-- Choose Cover -->
+                            <!-- Choose additions -->
                             <article class="mb-4">
                                 <h6 class="mb-2">الغلاف:</h6>
                                 <div class="owl-carousel select-addition owl6items  d-flex">
@@ -355,69 +352,77 @@
                                             class="position-relative text-center select_addition_item-img">
                                             <img src="../assets/img/custom-card/addictions-1.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="addition-1" name="additions[]">
+                                        <input type="hidden" value="addition-1" name="additions">
                                     </div>
                                     <div class="select_addition-item">
                                         <div data-cover="../assets/img/custom-card/addictions-2.jpg"
                                             class="position-relative text-center select_addition_item-img">
                                             <img src="../assets/img/custom-card/addictions-2.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="addition-2" name="additions[]">
+                                        <input type="hidden" value="addition-2" name="additions" disabled>
                                     </div>
                                     <div class="select_addition-item">
                                         <div data-cover="../assets/img/custom-card/addictions-3.jpg"
                                             class="position-relative text-center select_addition_item-img">
                                             <img src="../assets/img/custom-card/addictions-3.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="addition-3" name="additions[]">
+                                        <input type="hidden" value="addition-3" name="additions" disabled>
                                     </div>
                                     <div class="select_addition-item">
                                         <div data-cover="../assets/img/custom-card/addictions-2.jpg"
                                             class="position-relative text-center select_addition_item-img">
                                             <img src="../assets/img/custom-card/addictions-2.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="addition-2" name="additions[]">
+                                        <input type="hidden" value="addition-2" name="additions" disabled>
                                     </div>
                                     <div class="select_addition-item">
                                         <div data-cover="../assets/img/custom-card/addictions-3.jpg"
                                             class="position-relative text-center select_addition_item-img">
                                             <img src="../assets/img/custom-card/addictions-3.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="addition-3" name="additions[]">
+                                        <input type="hidden" value="addition-3" name="additions" disabled>
                                     </div>
                                     <div class="select_addition-item">
                                         <div data-cover="../assets/img/custom-card/addictions-3.jpg"
                                             class="position-relative text-center select_addition_item-img">
                                             <img src="../assets/img/custom-card/addictions-3.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="addition-3" name="additions[]">
+                                        <input type="hidden" value="addition-3" name="additions" disabled>
                                     </div>
                                     <div class="select_addition-item">
                                         <div data-cover="../assets/img/custom-card/addictions-2.jpg"
                                             class="position-relative text-center select_addition_item-img">
                                             <img src="../assets/img/custom-card/addictions-2.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="addition-2" name="additions[]">
+                                        <input type="hidden" value="addition-2" name="additions" disabled>
                                     </div>
                                     <div class="select_addition-item">
                                         <div data-cover="../assets/img/custom-card/addictions-3.jpg"
                                             class="position-relative text-center select_addition_item-img">
                                             <img src="../assets/img/custom-card/addictions-3.jpg" alt="message ready">
                                         </div>
-                                        <input type="hidden" value="addition-3" name="additions[]">
+                                        <input type="hidden" value="addition-3" name="additions" disabled>
                                     </div>
                                 </div>
                             </article>
                             <!-- Custom Your Message -->
                             <article class="mb-4">
                                 <h6 class="mb-2">اكتب رسالتك:</h6>
-                                <div class="d-flex">
-                                    <div class="position-relative flex-grow-1 custom-message-input">
+                                <div class="d-flex flex-column flex-sm-row gap-sm-0 gap-2">
+                                    <div class="position-relative flex-grow-1 custom-message-input"
+                                        data-bs-toggle="tooltip" title="اضغط 'اضف الرساله'
+                                        بعد الانتهاء">
+                                        <span class="invalid-feedback" id="wordError"> لاتزيد الكلمات عن 28
+                                            كلمة
+                                            او 180
+                                            حرفا</span>
+                                        <span class="invalid-feedback" id="emptyError">يجب ملئ هذه
+                                            الخانه</span>
                                         <textarea name="customMessage" rows="5"
                                             class="form-control border-2 border-primary rounded-3 px-3 pt-2"
                                             placeholder="الرسالة"></textarea>
                                     </div>
-                                    <div class="flex-shrink-0 toggle-custom-message align-self-end ms-3">
+                                    <div class="flex-shrink-0 toggle-custom-message align-self-end me-auto ms-sm-3">
                                         <button type="button"
                                             class="btn btn-primary custom-rounded display-sm px-4 py-2 me-2">
                                             أضف الرسالة
@@ -433,7 +438,7 @@
                                     role="group" aria-label="Basic example">
                                     <button type="button" class="py-1 btn btn-light minus">-</button>
                                     <input type="number" class="py-1 text-center form-control border-0 w-fit" value="1"
-                                        min="1" max="56" name="quantity">
+                                        min="1" max="56" name="quantityCard">
                                     <button type="button" class="py-1 btn btn-primary plus">+</button>
                                 </div>
 
@@ -458,9 +463,14 @@
                     </div>
                     <!-- Product Images -->
                     <div class="col-lg-6">
-                        <div class="w-100 w-lg-80 mx-auto">
-                            <img src="../assets/img/products/blunt-3.jpg" height="550"
-                                class="img-content w-100 rounded-3" alt="flower roza blunt ورد روزا">
+                        <div
+                            class="w-100 w-lg-80 mx-auto position-relative rounded-3 overflow-hidden special-card-wrap">
+                            <img src="../assets/img/custom-card/cover-1.jpg" class="sp-cr-img-cover" alt="cover">
+                            <img src="../assets/img/custom-card/addictions-1.jpg" class="sp-cr-img-zohore" alt="زهور">
+                            <p class="sp-cr-message display-lg fw-600 text-wrap">الرسالة هنا</p>
+                            <div class="sp-cr-img-flower">
+                                <img src="../assets/img/custom-card/flower-red.png" alt="وردة احمر">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -569,11 +579,18 @@
     </div>
 
     <div class="modal fade" id="baqa" tabindex="-1" aria-labelledby="baqaLabel" aria-hidden="true">
-        <div class="modal-dialog  modal-lg">
+        <div class="modal-dialog  modal-lg center modal-dialog-centered">
             <div class="modal-content bg-transparent border-0 shadow-none">
-                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="modal-body p-0">
-                    <img src="../assets/img/products/blunt-3.jpg" width="100%" alt="فاظه">
+                    <div class="w-100 w-lg-80 mx-auto position-relative rounded-3 overflow-hidden special-card-wrap">
+                        <img src="../assets/img/custom-card/cover-1.jpg" class="sp-cr-img-cover" alt="cover">
+                        <img src="../assets/img/custom-card/addictions-1.jpg" class="sp-cr-img-zohore" alt="زهور">
+                        <p class="sp-cr-message display-lg fw-600 text-wrap">الرسالة هنا</p>
+                        <div class="sp-cr-img-flower">
+                            <img src="../assets/img/custom-card/flower-red.png" alt="وردة احمر">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

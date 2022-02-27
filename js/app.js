@@ -1,3 +1,9 @@
+/* 
+
+  Change Preview Flower
+
+*/
+
 $(function () {
   const loaderTag = $(".page-loader");
   const tooltipTriggerList = $('[data-bs-toggle="tooltip"]');
@@ -8,6 +14,14 @@ $(function () {
   const textAreaCustomMessage = $(".custom-message-input");
   const toggleCustomMessageBTN = $(".toggle-custom-message");
   const quantityButtons = $(".quantity-buttons");
+  const previewSpecialCard = $(".special-card-wrap");
+
+  // Special Card Page
+  const specialCardSection = $(".special-bouqet-section");
+  const flowerTypeWrap = $(".special-bouqet-section .flower-type");
+  const coverSlectWrap = $(".special-bouqet-section .select-thecover");
+  const tapColorSlectWrap = $(".special-bouqet-section .select-tap");
+  const additionsSlectWrap = $(".special-bouqet-section .select-addition");
 
   const CAROUSEL_SETTINGS_SAID = {
     dots: true,
@@ -35,6 +49,13 @@ $(function () {
   });
 
   let readyMessageInput;
+  let alertTemplate = (
+    type = "danger",
+    message
+  ) => ` <div class="alert alert-${type} py-2  alert-dismissible fade show" role="alert" data-bs-delay="500">
+          <div class="alert-text display-omd">${message}</div>
+          <button type="button" class="btn-close py-3" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>`;
 
   // page loader
   loaderTag.find(".page-loader").animate(
@@ -160,7 +181,10 @@ $(function () {
   }
 
   // 2) Enable Custom Message Product Details
-  if (textAreaCustomMessage.length) {
+  if (
+    textAreaCustomMessage.length &&
+    location.pathname.includes("product-details")
+  ) {
     let enable = true;
     let textarea = textAreaCustomMessage.find("textarea");
     toggleCustomMessageBTN.on("click", () => {
@@ -168,7 +192,7 @@ $(function () {
       textarea.toggleClass("disabled");
 
       if (enable) {
-        textarea.removeAttr("disabled");
+        toggleDisabeld(textarea, "rm");
         textarea.focus();
         enableCustomMessage = true;
         readyMessageWrap.addClass("opacity-25");
@@ -176,10 +200,10 @@ $(function () {
           userSelect: "none",
           pointerEvents: "none",
         });
-        readyMessageInput.prop("disabled", true);
+        toggleDisabeld(readyMessageInput);
         enable = false;
       } else {
-        textarea.prop("disabled", true);
+        toggleDisabeld(textarea);
         enableCustomMessage = false;
         readyMessageInput.removeAttr("disabled");
         readyMessageWrap.removeAttr("style");
@@ -187,5 +211,184 @@ $(function () {
         enable = true;
       }
     });
+  }
+
+  // Special Card
+  if (location.pathname.includes("special-bouquet") || flowerTypeWrap.length) {
+    // Vars
+    let [flowerItems, flowerImgs, selectedFloweres, translateX] = [
+      flowerTypeWrap.find(".flower_type-item"),
+      flowerTypeWrap.find(".flower_type-item .flower_type_item-img"),
+      new Set(),
+      120, // Get default data src from html
+    ];
+    const coverItems = coverSlectWrap.find(".select_thecover-item");
+    const colorTabsItems = tapColorSlectWrap.find(".select_tap-item");
+    const additionsItems = additionsSlectWrap.find(".select_addition-item");
+    /*
+     ** Add Active On Selected Item
+     *** Flowers
+     *** Cover
+     *** taps color
+     *** Additions
+     */
+
+    flowerImgs.click(function () {
+      let parent = $(this).parent();
+      let inputs = $(this).parent().find("input");
+      let isSelect = [];
+      // Toggle Active
+      parent.toggleClass("select");
+
+      // Toggle Disabled Input
+      if (parent.hasClass("select")) {
+        toggleDisabeld(inputs, "rm");
+      } else {
+        toggleDisabeld(inputs);
+      }
+
+      // Check if user not select element (At least on flower should selected)
+      // 1 Clear Selected flowers array first
+      selectedFloweres.clear();
+      // 2 Add selected Item to array and create array from true values of selected items
+      flowerItems.each(function () {
+        let isSelected = $(this).hasClass("select");
+        isSelect.push(isSelected);
+        if (isSelected) {
+          selectedFloweres.add(
+            $(this).find(".flower_type_item-img").data("flower")
+          );
+        }
+      });
+
+      // Check if user want to not select and throw error
+      if (!isSelect.includes(true)) {
+        selectedFloweres.add(
+          flowerItems.first().find(".flower_type_item-img").data("flower")
+        );
+
+        if ($(".alert").length == 0) {
+          specialCardSection
+            .find(".col-lg-6.order-1.order-lg-0")
+            .prepend(
+              alertTemplate(
+                "danger",
+                "يجب ان يكون تم اختيار على الاقل ورده واحده"
+              )
+            )
+            .end()
+            .find(".alert")
+            .delay(3500)
+            .slideUp(200, function () {
+              $(this).remove();
+            });
+        }
+        flowerItems.first().addClass("select");
+        toggleDisabeld(flowerItems.first().find("input"), "rm");
+      } else {
+        hideAlert();
+      }
+
+      // Show Images on preview card
+      previewSpecialCard.find(".sp-cr-img-flower").html("");
+      selectedFloweres.forEach((src) => {
+        previewSpecialCard
+          .find(".sp-cr-img-flower")
+          .prepend(`<img src=${src} alt="ورد">`);
+      });
+    });
+
+    coverItems.click(function () {
+      let selectedData = $(this)
+        .find(".select_thecover_item-img")
+        .data("cover");
+      let siblings = $(this).parent().siblings();
+
+      // Handle Active classes and disabled inputs
+      handleSelectItem($(this), ".select_thecover-item", siblings);
+
+      // Change Img of card
+      previewSpecialCard.find(".sp-cr-img-cover").attr("src", selectedData);
+    });
+
+    colorTabsItems.each(function () {
+      // Set Colors for bg of tap item
+      let tapItemImg = $(this).find(".select_tap_item-img");
+      tapItemImg.css("background-color", tapItemImg.data("tapcolor"));
+
+      // Handle Click item
+      $(this).click(function () {
+        let selectedData = $(this)
+          .find(".select_tap_item-img")
+          .data("tapcolor");
+        let siblings = $(this).parent().siblings();
+        // Handle Active classes and disabled inputs
+        handleSelectItem($(this), ".select_tap-item", siblings);
+        // Change text color of card review
+        previewSpecialCard.find(".sp-cr-message").css("color", selectedData);
+      });
+    });
+
+    additionsItems.click(function () {
+      let selectedData = $(this)
+        .find(".select_addition_item-img")
+        .data("cover");
+      let siblings = $(this).parent().siblings();
+
+      // Handle Active classes and disabled inputs
+      handleSelectItem($(this), ".select_addition-item", siblings);
+
+      // Change Image in review
+      previewSpecialCard.find(".sp-cr-img-zohore").attr("src", selectedData);
+    });
+
+    // Handle Message
+    toggleCustomMessageBTN.find("button").click(function () {
+      let input = textAreaCustomMessage.find("textarea");
+      let inputValue = input.val().trim();
+
+      if (inputValue) {
+        if (inputValue.length > 180) {
+          // 180 about 28 word
+          input.addClass("border-danger");
+          $(".invalid-feedback#wordError").slideDown(200);
+          return;
+        }
+
+        $(".invalid-feedback#emptyError").slideUp(200);
+        $(".invalid-feedback#wordError").slideUp(200);
+        previewSpecialCard.find(".sp-cr-message").text(inputValue);
+        input.hasClass("border-danger") && input.removeClass("border-danger");
+        $("body,html").animate(
+          {
+            scrollTop: previewSpecialCard.offset().top,
+          },
+          200
+        );
+      } else {
+        $(".invalid-feedback#emptyError").slideDown(200);
+        input.addClass("border-danger");
+      }
+    });
+  }
+
+  // Functions
+  function toggleDisabeld(item, type = "ac") {
+    type == "rm" ? item.removeAttr("disabled") : item.prop("disabled", true);
+  }
+
+  function hideAlert(item = $(".alert")) {
+    item.slideUp(200, function () {
+      $(this).remove();
+    });
+  }
+
+  function handleSelectItem(item, itemClass, siblings) {
+    // Toggle Active Classes
+    siblings.find(itemClass).removeClass("select");
+    item.addClass("select");
+    // Toggle Disable from input
+    toggleDisabeld(siblings.find(itemClass + " input"));
+    toggleDisabeld(item.find("input"), "rm");
   }
 });
