@@ -1,9 +1,3 @@
-/* 
-
-  Change Preview Flower
-
-*/
-
 $(function () {
   const loaderTag = $(".page-loader");
   const tooltipTriggerList = $('[data-bs-toggle="tooltip"]');
@@ -77,12 +71,34 @@ $(function () {
     // Said Section
     if (
       $(carouselSaid).not(
-        ".ready-message-wrap,.flower-type ,.select-thecover, .owl6items"
+        ".products-carousel, .ready-message-wrap,.flower-type ,.select-thecover, .owl6items"
       ).length
     ) {
       $(carouselSaid)
-        .not(".ready-message-wrap")
+        .not(
+          ".products-carousel, .ready-message-wrap,.flower-type ,.select-thecover, .owl6items"
+        )
         .owlCarousel(CAROUSEL_SETTINGS_SAID);
+    }
+    // Home Page Products Carousel
+    if ($(`${carouselSaid}.products-carousel`).length > 0) {
+      $(`${carouselSaid}.products-carousel`).owlCarousel({
+        ...Carousal_Public_Options(0, 5),
+        loop: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplaySpeed: 500,
+        autoplayTimeout: 6000,
+        center: true,
+        responsive: {
+          0: {
+            nav: false,
+          },
+          1024: {
+            nav: true,
+          },
+        },
+      });
     }
     // Product Details Select Ready message
     if ($(`${carouselSaid}.ready-message-wrap`).length > 0) {
