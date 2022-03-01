@@ -9,6 +9,8 @@ $(function () {
   const toggleCustomMessageBTN = $(".toggle-custom-message");
   const quantityButtons = $(".quantity-buttons");
   const previewSpecialCard = $(".special-card-wrap");
+  const selectDifferentAddress = $("#differentAddress"); // Payment Page
+  const selectAddressOnMap = $(".select-map"); // Payment Page
 
   // Special Card Page
   const specialCardSection = $(".special-bouqet-section");
@@ -173,70 +175,126 @@ $(function () {
    */
 
   // 1) handle Select Ready Message
-  if (readyMessageWrap.length) {
-    /*
-     ** Will get value of selected image and put it in input hidden value to send it with sumbit
-     */
+
+  // 2) Enable Custom Message Product Details
+  if (
+    textAreaCustomMessage.length &&
+    readyMessageWrap.length &&
+    location.pathname.includes("product-details")
+  ) {
+    const deliveryTimeWrap = $(".delivery-time-wrap");
+    const toggleBTNText = toggleCustomMessageBTN.find("button").text().trim();
+    let enable = true;
+    let textarea = textAreaCustomMessage.find("textarea");
+
+    // Set Value of input to selected image
     readyMessageInput = readyMessageWrap.siblings(
       "input[name='choosedMessage']"
     );
-
     readyMessageWrap.find(".ready-message-item").each(function () {
+      // Set Default Image
+      if ($(this).hasClass("select")) {
+        textarea.css(
+          "background-image",
+          `url(${$(this).find("img").attr("src")})`
+        );
+      }
+
+      // Set image on click
       $(this).on("click", function () {
         $(this)
           .parent()
           .siblings()
           .find(".ready-message-item")
           .removeClass("select");
-
         $(this).addClass("select");
-
         readyMessageInput.val($(this).data("readymessage"));
+
+        // Set texrarea to this selected image
+        textarea.css(
+          "background-image",
+          `url(${$(this).find("img").attr("src")})`
+        );
       });
     });
-  }
-
-  // 2) Enable Custom Message Product Details
-  if (
-    textAreaCustomMessage.length &&
-    location.pathname.includes("product-details")
-  ) {
-    let enable = true;
-    let textarea = textAreaCustomMessage.find("textarea");
-    toggleCustomMessageBTN.on("click", () => {
-      textAreaCustomMessage.toggleClass("select");
+    // Enable Add Message
+    toggleCustomMessageBTN.on("click", function () {
+      const btn = $(this).find("button");
       textarea.toggleClass("disabled");
 
       if (enable) {
         toggleDisabeld(textarea, "rm");
         textarea.focus();
-        enableCustomMessage = true;
-        readyMessageWrap.addClass("opacity-25");
-        readyMessageWrap.css({
-          userSelect: "none",
-          pointerEvents: "none",
-        });
-        toggleDisabeld(readyMessageInput);
+        textarea.removeClass("opacity-50");
+        btn.text("الغاء الرساله");
         enable = false;
       } else {
+        btn.text(toggleBTNText);
         toggleDisabeld(textarea);
-        enableCustomMessage = false;
-        readyMessageInput.removeAttr("disabled");
-        readyMessageWrap.removeAttr("style");
-        readyMessageWrap.removeClass("opacity-25");
+        textarea.addClass("opacity-50");
         enable = true;
       }
+    });
+
+    // Received Date
+    $(".receivedDateInput").flatpickr({
+      minDate: "today",
+    });
+
+    // Toggle Time of delivery
+    deliveryTimeWrap.find(".form-check-input").change(function () {
+      let selectedValue = $(this).val().trim();
+      let normalInputTime = deliveryTimeWrap.find("#normalTime");
+      let fastInputTime = deliveryTimeWrap.find("#fastTimeRange");
+      if (selectedValue === "توصيل عادي") {
+        toggleDisabeld(normalInputTime, "rm");
+        toggleDisabeld(fastInputTime);
+        normalInputTime.removeClass("opacity-50");
+        fastInputTime.addClass("opacity-50");
+        fastInputTime.addClass("bg-light");
+        fastInputTime.removeClass("bg-white");
+      } else if (selectedValue === "توصيل سريع") {
+        toggleDisabeld(fastInputTime, "rm");
+        toggleDisabeld(normalInputTime);
+        fastInputTime.removeClass("opacity-50");
+        fastInputTime.addClass("bg-white");
+        fastInputTime.removeClass("bg-light");
+        normalInputTime.addClass("opacity-50");
+      }
+    });
+
+    // The Delivery Time
+    $("#fastTimeRange").flatpickr({
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "G:i K",
+      minTime: "15:00",
+      maxTime: "23:30",
+      time_24hr: false,
+    });
+
+    // Enable Upload QR Code
+    $.fn.filepond.registerPlugin(
+      FilePondPluginFileEncode,
+      FilePondPluginFileValidateType
+    );
+    $(".qrcode").filepond({
+      labelIdle:
+        '<p class="m-0 text-primary">اسحب صورة الكود الى هنا <br> او<span class="filepond--label-action display-md"> تصفح جهازك </span></p>',
+      credits: false,
+      allowFileEncode: true,
+      allowFileTypeValidation: true,
+      acceptedFileTypes: ["image/*"],
     });
   }
 
   // Special Card
   if (location.pathname.includes("special-bouquet") || flowerTypeWrap.length) {
     // Vars
-    let [flowerItems, flowerImgs, selectedFloweres, translateX] = [
+    let [flowerItems, flowerImgs, selectedFloweres] = [
       flowerTypeWrap.find(".flower_type-item"),
       flowerTypeWrap.find(".flower_type-item .flower_type_item-img"),
       new Set(),
-      120, // Get default data src from html
     ];
     const coverItems = coverSlectWrap.find(".select_thecover-item");
     const colorTabsItems = tapColorSlectWrap.find(".select_tap-item");
@@ -385,6 +443,27 @@ $(function () {
         $(".invalid-feedback#emptyError").slideDown(200);
         input.addClass("border-danger");
       }
+    });
+  }
+
+  // Payment Page
+  if (selectDifferentAddress.length || selectAddressOnMap.length) {
+    // Show map to select address
+    selectDifferentAddress.change(function () {
+      if ($(this).is(":checked")) {
+        selectAddressOnMap.removeClass("d-none");
+        selectAddressOnMap.slideDown();
+      } else {
+        selectAddressOnMap.slideUp();
+      }
+    });
+
+    // Handle Expired Date of card
+    $("#expiredCardDate").flatpickr({
+      minDate: "today",
+      dateFormat: "Y/m",
+      altFormat: "MM/YYYY",
+      position: "auto center",
     });
   }
 
