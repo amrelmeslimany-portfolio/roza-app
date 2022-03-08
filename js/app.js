@@ -268,7 +268,9 @@ $(function () {
         fastInputTime.addClass("opacity-50");
         fastInputTime.addClass("bg-light");
         fastInputTime.removeClass("bg-white");
-      } else if (selectedValue === "توصيل سريع" || selectedValue == "2") {
+      }
+
+      if (selectedValue === "توصيل سريع" || selectedValue == "2") {
         toggleDisabeld(fastInputTime, "rm");
         toggleDisabeld(normalInputTime);
         fastInputTime.removeClass("opacity-50");
