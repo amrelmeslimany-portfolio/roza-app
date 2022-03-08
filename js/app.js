@@ -246,15 +246,15 @@ $(function () {
     });
 
     // The Delivery Time
-    // fastInputTime.flatpickr({
-    //   enableTime: true,
-    //   noCalendar: true,
-    //   dateFormat: "G:i K",
-    //   minTime: "15:00",
-    //   maxTime: "23:30",
-    //   time_24hr: false,
-    //   disableMobile: "false",
-    // });
+    fastInputTime.flatpickr({
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "G:i K",
+      minTime: "15:00",
+      maxTime: "23:30",
+      time_24hr: false,
+      disableMobile: "false",
+    });
 
     // Toggle Time of delivery
     deliveryTimeWrap.find(".form-check-input").change(function () {
@@ -275,7 +275,6 @@ $(function () {
         toggleDisabeld(normalInputTime);
         fastInputTime.removeClass("opacity-50");
         fastInputTime.addClass("bg-white");
-        fastInputTime.addClass("border-primary");
         fastInputTime.removeClass("bg-light");
         normalInputTime.addClass("opacity-50");
       }
