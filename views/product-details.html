@@ -266,10 +266,13 @@
                             <!-- Delivery Time -->
                             <article class="delivery-time-wrap">
                                 <h5 class="text-primary">وقت الاستلام:</h5>
-
+                                <!-- 
+                                    value 1 == توصيل عادي 
+                                    value 2 == توصيل سريع
+                                -->
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" id="ordinary" name="timeDelivery[type]"
-                                        value="توصيل عادي" checked>
+                                        value="1" checked>
                                     <label class="form-check-label" for="ordinary">توصيل عادي</label>
                                     <small class="form-text">من 06:00مساءًا إلى 11:30مساءًا</small>
                                     <select name="timeDelivery[time]" id="normalTime"
@@ -281,7 +284,7 @@
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" id="fastDelivery"
-                                        name="timeDelivery[type]" value="توصيل سريع">
+                                        name="timeDelivery[type]" value="2">
                                     <label class="form-check-label" for="fastDelivery">توصيل سريع</label>
                                     <small class="form-text">من 03:00مساءًا إلى 11:30مساءًا</small>
                                     <input name="timeDelivery[time]" disabled type="time" id="fastTimeRange"

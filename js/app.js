@@ -7,6 +7,7 @@ $(function () {
   const readyMessageWrap = $(".ready-message-wrap");
   const textAreaCustomMessage = $(".custom-message-input");
   const toggleCustomMessageBTN = $(".toggle-custom-message");
+  const fastInputTime = $(".delivery-time-wrap #fastTimeRange");
   const quantityButtons = $(".quantity-buttons");
   const previewSpecialCard = $(".special-card-wrap");
   const selectDifferentAddress = $("#differentAddress"); // Payment Page
@@ -241,19 +242,30 @@ $(function () {
       minDate: "today",
     });
 
+    // The Delivery Time
+    fastInputTime.flatpickr({
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "G:i K",
+      minTime: "15:00",
+      maxTime: "23:30",
+      time_24hr: false,
+    });
+
     // Toggle Time of delivery
     deliveryTimeWrap.find(".form-check-input").change(function () {
       let selectedValue = $(this).val().trim();
       let normalInputTime = deliveryTimeWrap.find("#normalTime");
-      let fastInputTime = deliveryTimeWrap.find("#fastTimeRange");
-      if (selectedValue === "توصيل عادي") {
+
+      if (selectedValue === "توصيل عادي" || selectedValue == "1") {
         toggleDisabeld(normalInputTime, "rm");
         toggleDisabeld(fastInputTime);
         normalInputTime.removeClass("opacity-50");
         fastInputTime.addClass("opacity-50");
         fastInputTime.addClass("bg-light");
         fastInputTime.removeClass("bg-white");
-      } else if (selectedValue === "توصيل سريع") {
+      } else if (selectedValue === "توصيل سريع" || selectedValue == "2") {
+        fastInputTime[0].disabled = false;
         toggleDisabeld(fastInputTime, "rm");
         toggleDisabeld(normalInputTime);
         fastInputTime.removeClass("opacity-50");
@@ -261,16 +273,6 @@ $(function () {
         fastInputTime.removeClass("bg-light");
         normalInputTime.addClass("opacity-50");
       }
-    });
-
-    // The Delivery Time
-    $("#fastTimeRange").flatpickr({
-      enableTime: true,
-      noCalendar: true,
-      dateFormat: "G:i K",
-      minTime: "15:00",
-      maxTime: "23:30",
-      time_24hr: false,
     });
 
     // Enable Upload QR Code
