@@ -8,8 +8,8 @@ $(function () {
   const textAreaCustomMessage = $(".custom-message-input");
   const toggleCustomMessageBTN = $(".toggle-custom-message");
   const fastInputTime = $(
-    ".delivery-time-wrap input[name='timeDelivery[time]']"
-  ); // #fastTimeRange
+    ".delivery-time-wrap #fastTimeRange" // input[name='timeDelivery[time]']
+  );
   const quantityButtons = $(".quantity-buttons");
   const previewSpecialCard = $(".special-card-wrap");
   const selectDifferentAddress = $("#differentAddress"); // Payment Page
