@@ -7,7 +7,7 @@ $(function () {
   const readyMessageWrap = $(".ready-message-wrap");
   const textAreaCustomMessage = $(".custom-message-input");
   const toggleCustomMessageBTN = $(".toggle-custom-message");
-  const fastInputTime = $(".delivery-time-wrap .fst-time"); // #fastTimeRange
+  const fastInputTime = $(".delivery-time-wrap #fastTimeRange");
   const quantityButtons = $(".quantity-buttons");
   const previewSpecialCard = $(".special-card-wrap");
   const selectDifferentAddress = $("#differentAddress"); // Payment Page
@@ -257,22 +257,22 @@ $(function () {
       let selectedValue = $(this).val().trim();
       let normalInputTime = deliveryTimeWrap.find("#normalTime");
 
-      if (selectedValue === "توصيل عادي" || selectedValue == "1") {
-        toggleDisabeld(normalInputTime, "rm");
-        toggleDisabeld(fastInputTime);
-        normalInputTime.removeClass("opacity-50");
-        fastInputTime.addClass("opacity-50");
-        fastInputTime.addClass("bg-light");
-        fastInputTime.removeClass("bg-white");
-      } else if (selectedValue === "توصيل سريع" || selectedValue == "2") {
-        fastInputTime[0].disabled = false;
-        toggleDisabeld(fastInputTime, "rm");
-        toggleDisabeld(normalInputTime);
-        fastInputTime.removeClass("opacity-50");
-        fastInputTime.addClass("bg-white");
-        fastInputTime.removeClass("bg-light");
-        normalInputTime.addClass("opacity-50");
-      }
+      // if (selectedValue === "توصيل عادي" || selectedValue == "1") {
+      //   toggleDisabeld(normalInputTime, "rm");
+      //   toggleDisabeld(fastInputTime);
+      //   normalInputTime.removeClass("opacity-50");
+      //   fastInputTime.addClass("opacity-50");
+      //   fastInputTime.addClass("bg-light");
+      //   fastInputTime.removeClass("bg-white");
+      // } else if (selectedValue === "توصيل سريع" || selectedValue == "2") {
+      //   fastInputTime[0].disabled = false;
+      //   toggleDisabeld(fastInputTime, "rm");
+      //   toggleDisabeld(normalInputTime);
+      //   fastInputTime.removeClass("opacity-50");
+      //   fastInputTime.addClass("bg-white");
+      //   fastInputTime.removeClass("bg-light");
+      //   normalInputTime.addClass("opacity-50");
+      // }
     });
 
     // Enable Upload QR Code
