@@ -275,6 +275,7 @@ $(function () {
         toggleDisabeld(normalInputTime);
         fastInputTime.removeClass("opacity-50");
         fastInputTime.addClass("bg-white");
+        fastInputTime.addClass("border-primary");
         fastInputTime.removeClass("bg-light");
         normalInputTime.addClass("opacity-50");
       }
