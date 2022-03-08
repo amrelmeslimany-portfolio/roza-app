@@ -265,6 +265,7 @@ $(function () {
         fastInputTime.addClass("bg-light");
         fastInputTime.removeClass("bg-white");
       } else if (selectedValue === "توصيل سريع" || selectedValue == "2") {
+        console.log(fastInputTime);
         fastInputTime[0].disabled = false;
         toggleDisabeld(fastInputTime, "rm");
         toggleDisabeld(normalInputTime);
