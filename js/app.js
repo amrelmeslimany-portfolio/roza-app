@@ -7,7 +7,7 @@ $(function () {
   const readyMessageWrap = $(".ready-message-wrap");
   const textAreaCustomMessage = $(".custom-message-input");
   const toggleCustomMessageBTN = $(".toggle-custom-message");
-  const fastInputTime = $(".delivery-time-wrap #fastTimeRange");
+  const fastInputTime = $(".delivery-time-wrap .fst-time"); // #fastTimeRange
   const quantityButtons = $(".quantity-buttons");
   const previewSpecialCard = $(".special-card-wrap");
   const selectDifferentAddress = $("#differentAddress"); // Payment Page
@@ -265,7 +265,6 @@ $(function () {
         fastInputTime.addClass("bg-light");
         fastInputTime.removeClass("bg-white");
       } else if (selectedValue === "توصيل سريع" || selectedValue == "2") {
-        console.log(fastInputTime);
         fastInputTime[0].disabled = false;
         toggleDisabeld(fastInputTime, "rm");
         toggleDisabeld(normalInputTime);
